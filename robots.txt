@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://DEIN-BENUTZERNAME.github.io/patricia-luber-malerei/sitemap.xml
+Sitemap: https://steffen0tt.github.io/patricialuber/sitemap.xml
