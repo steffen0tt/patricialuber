@@ -1,0 +1,2124 @@
+{
+ "site": {
+  "title": "Patricia Luber – Malerei",
+  "artist": "Patricia Luber-Laporte",
+  "city": "Köln",
+  "email": "luber.laporte@web.de",
+  "hero_image": {
+   "media": "f104f4_17364572c27f4e68bdc8ac2cbd5f41a7~mv2.jpg",
+   "slug": "hero"
+  },
+  "portrait_image": {
+   "media": "f104f4_30422e42314346a39f0ec9fef1d4fba3~mv2.jpg",
+   "slug": "portrait"
+  },
+  "full_name": "Patricia Luber-Laporte",
+  "address_street": "Sankt-Georg-Straße 27",
+  "address_zip": "50859",
+  "address_city": "Lindenthal",
+  "phone": "+49 (0)2234 945489",
+  "url": "https://DEIN-BENUTZERNAME.github.io/patricia-luber-malerei/"
+ },
+ "categories": [
+  {
+   "slug": "abstrakt",
+   "title": "Abstrakt",
+   "parent": "oel-acryl"
+  },
+  {
+   "slug": "landschaften",
+   "title": "Landschaften",
+   "parent": "oel-acryl"
+  },
+  {
+   "slug": "menschen",
+   "title": "Menschen",
+   "parent": "oel-acryl"
+  },
+  {
+   "slug": "pflanzen-stillleben",
+   "title": "Früchte, Pflanzen & Stillleben",
+   "parent": "oel-acryl"
+  },
+  {
+   "slug": "tiermotive",
+   "title": "Tiermotive",
+   "parent": "oel-acryl"
+  },
+  {
+   "slug": "aquarell",
+   "title": "Aquarell",
+   "parent": null
+  }
+ ],
+ "artworks": [
+  {
+   "slug": "obsteller",
+   "name": "Obsteller",
+   "media": "f104f4_7682a94188524cac930ae8ea7a9b14e0~mv2.jpeg",
+   "cats": [
+    "home",
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Acryl auf Leinwand, 50x60cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_7682a94188524cac930ae8ea7a9b14e0~mv2.jpeg"
+   ],
+   "gallery_files": [
+    "obsteller.jpg"
+   ],
+   "is_new": true
+  },
+  {
+   "slug": "fische-1",
+   "name": "Fische 1",
+   "media": "f104f4_bfd8effbba434f359cf8c321c78c3b52~mv2.jpeg",
+   "cats": [
+    "home",
+    "landschaften",
+    "tiermotive"
+   ],
+   "medium_size": [
+    "Acryl auf Leinwand, 50x60cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_bfd8effbba434f359cf8c321c78c3b52~mv2.jpeg"
+   ],
+   "gallery_files": [
+    "fische-1.jpg"
+   ],
+   "is_new": true
+  },
+  {
+   "slug": "libellen",
+   "name": "Libellen",
+   "media": "f104f4_c812ad156b7349208591ba19800fbe43~mv2.jpeg",
+   "cats": [
+    "home",
+    "landschaften",
+    "tiermotive"
+   ],
+   "medium_size": [
+    "Acryl auf Leinwand, 145x110cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_c812ad156b7349208591ba19800fbe43~mv2.jpeg"
+   ],
+   "gallery_files": [
+    "libellen.jpg"
+   ],
+   "is_new": true
+  },
+  {
+   "slug": "rot",
+   "name": "Rot",
+   "media": "f104f4_68524d0c62aa47a3b58a88611b608788~mv2.jpeg",
+   "cats": [
+    "home",
+    "abstrakt"
+   ],
+   "medium_size": [
+    "Acryl auf Leinwand, 116x75cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_68524d0c62aa47a3b58a88611b608788~mv2.jpeg"
+   ],
+   "gallery_files": [
+    "rot.jpg"
+   ],
+   "is_new": true
+  },
+  {
+   "slug": "tuerkis",
+   "name": "Türkis",
+   "media": "f104f4_cdb8a2b3f71a4b6eb24213f4cf4d8726~mv2.jpeg",
+   "cats": [
+    "home",
+    "abstrakt"
+   ],
+   "medium_size": [
+    "Acryl auf Leinwand, 100x80cm"
+   ],
+   "price": null,
+   "media_all": [
+    "f104f4_cdb8a2b3f71a4b6eb24213f4cf4d8726~mv2.jpeg"
+   ],
+   "gallery_files": [
+    "tuerkis.jpg"
+   ],
+   "is_new": true
+  },
+  {
+   "slug": "blaetter-1",
+   "name": "Blätter",
+   "media": "f104f4_dd6c34c8a4cc4b8bb5591fc0a44b5b17~mv2.jpeg",
+   "cats": [
+    "home",
+    "abstrakt"
+   ],
+   "medium_size": [
+    "Acryl auf Leinwand, 100x80cm"
+   ],
+   "price": null,
+   "media_all": [
+    "f104f4_dd6c34c8a4cc4b8bb5591fc0a44b5b17~mv2.jpeg"
+   ],
+   "gallery_files": [
+    "blaetter-1.jpg"
+   ],
+   "is_new": true
+  },
+  {
+   "slug": "gruen-in-gruen",
+   "name": "Grün in Grün",
+   "media": "f104f4_c3e7f351e7ae4d3a9ecb9a6ffa98f4ab~mv2.jpeg",
+   "cats": [
+    "home",
+    "abstrakt"
+   ],
+   "medium_size": [
+    "Acryl auf Leinwand, 100x80cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_c3e7f351e7ae4d3a9ecb9a6ffa98f4ab~mv2.jpeg"
+   ],
+   "gallery_files": [
+    "gruen-in-gruen.jpg"
+   ],
+   "is_new": true
+  },
+  {
+   "slug": "koeln-bei-nacht",
+   "name": "Köln bei Nacht",
+   "media": "f104f4_d8b9e33adfc245d594509dbcfb6cb9f7~mv2.jpeg",
+   "cats": [
+    "home",
+    "landschaften"
+   ],
+   "medium_size": [
+    "Acryl auf Leinwand, 100x80cm"
+   ],
+   "price": null,
+   "media_all": [
+    "f104f4_d8b9e33adfc245d594509dbcfb6cb9f7~mv2.jpeg"
+   ],
+   "gallery_files": [
+    "koeln-bei-nacht.jpg"
+   ],
+   "is_new": true
+  },
+  {
+   "slug": "wald-und-wiese",
+   "name": "Wald und Wiese",
+   "media": "f104f4_228305debc49490d84074343d670ffcc~mv2.jpeg",
+   "cats": [
+    "home",
+    "landschaften"
+   ],
+   "medium_size": [
+    "Acryl auf Leinwand, 100x80cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_228305debc49490d84074343d670ffcc~mv2.jpeg"
+   ],
+   "gallery_files": [
+    "wald-und-wiese.jpg"
+   ],
+   "is_new": true
+  },
+  {
+   "slug": "aschaffenburg",
+   "name": "Aschaffenburg",
+   "media": "f104f4_1c30d55c3734424faf6c60563168f264~mv2.jpeg",
+   "cats": [
+    "home",
+    "landschaften"
+   ],
+   "medium_size": [
+    "Acryl auf Leinwand, 100x80cm"
+   ],
+   "price": null,
+   "media_all": [
+    "f104f4_1c30d55c3734424faf6c60563168f264~mv2.jpeg"
+   ],
+   "gallery_files": [
+    "aschaffenburg.jpg"
+   ],
+   "is_new": true
+  },
+  {
+   "slug": "fische-2",
+   "name": "Fische 2",
+   "media": "f104f4_c05f596ba52a4c608c11a35a2e264bf5~mv2.jpg",
+   "cats": [
+    "home",
+    "landschaften",
+    "tiermotive"
+   ],
+   "medium_size": [
+    "Acryl auf Leinwand, 100x50cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_c05f596ba52a4c608c11a35a2e264bf5~mv2.jpg"
+   ],
+   "gallery_files": [
+    "fische-2.jpg"
+   ],
+   "is_new": true
+  },
+  {
+   "slug": "blumenabstraktion",
+   "name": "Blumenabstraktion",
+   "media": "f104f4_13c81c1181e144c9a03f651d8c76b2e2~mv2.jpg",
+   "cats": [
+    "home",
+    "abstrakt",
+    "landschaften"
+   ],
+   "medium_size": [
+    "Acryl auf Leinwand, 100x80 cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_13c81c1181e144c9a03f651d8c76b2e2~mv2.jpg"
+   ],
+   "gallery_files": [
+    "blumenabstraktion.jpg"
+   ],
+   "is_new": true
+  },
+  {
+   "slug": "rote-dame",
+   "name": "Mönch in Laos",
+   "media": "f104f4_8fed3ad9515e47b7bac1b4480db64308~mv2.jpg",
+   "cats": [
+    "home",
+    "menschen"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 30x40cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_8fed3ad9515e47b7bac1b4480db64308~mv2.jpg",
+    "f104f4_088371954dec4e37b691039b10755339~mv2.jpg",
+    "f104f4_e9ab45f8069848e59da4d26a2ac80250~mv2.jpg"
+   ],
+   "gallery_files": [
+    "rote-dame.jpg",
+    "rote-dame-2.jpg",
+    "rote-dame-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "herdentrieb",
+   "name": "Herde in Myanmar",
+   "media": "f104f4_b66cc1d0a27d4665b5f006c9e16750ee~mv2.jpg",
+   "cats": [
+    "home",
+    "landschaften",
+    "menschen"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 70x50cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_b66cc1d0a27d4665b5f006c9e16750ee~mv2.jpg",
+    "f104f4_e6dbc08f64af46a795294f401daf74be~mv2.jpg",
+    "f104f4_93ff12ea42fc40b39b8ec1dc9b5bd605~mv2.jpg"
+   ],
+   "gallery_files": [
+    "herdentrieb.jpg",
+    "herdentrieb-2.jpg",
+    "herdentrieb-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "haus-mit-garten",
+   "name": "Lavendelfelder, Provence",
+   "media": "f104f4_f8de8c533b5d47a4bef9288b19a2a0b2~mv2.jpg",
+   "cats": [
+    "home",
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 80x60cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_f8de8c533b5d47a4bef9288b19a2a0b2~mv2.jpg",
+    "f104f4_d40c3fc452ba45a3b4ac3df233c9aab2~mv2.jpg",
+    "f104f4_9c34fc72679d4f1bae35e2fc3a6a2ce4~mv2.jpg"
+   ],
+   "gallery_files": [
+    "haus-mit-garten.jpg",
+    "haus-mit-garten-2.jpg",
+    "haus-mit-garten-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "wasserfall",
+   "name": "Wasserfall",
+   "media": "f104f4_86496eab11d348f7a96768d2a62ee980~mv2.jpg",
+   "cats": [
+    "home",
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 70x150"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_86496eab11d348f7a96768d2a62ee980~mv2.jpg",
+    "f104f4_ebe5d66571324073bfa049c1a5db8eba~mv2.jpg",
+    "f104f4_97c731c3d6404affaa1b92bf360713d8~mv2.jpg",
+    "f104f4_e6fdcc7257ea494596609e9b1bfc1c36~mv2.jpg",
+    "f104f4_f5792decc71741de958c73bec99bbd63~mv2.jpg"
+   ],
+   "gallery_files": [
+    "wasserfall.jpg",
+    "wasserfall-2.jpg",
+    "wasserfall-3.jpg",
+    "wasserfall-4.jpg",
+    "wasserfall-5.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "weidenweg",
+   "name": "Treppe mit Blüten",
+   "media": "f104f4_712198b83c634e488e6b915920fb602b~mv2.jpg",
+   "cats": [
+    "home",
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell",
+    "50x60cm (38x38cm ohne Passepartout)"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_712198b83c634e488e6b915920fb602b~mv2.jpg",
+    "f104f4_37ce376c6aab438c971876af67aa8098~mv2.jpg",
+    "f104f4_339f689a39ef41b4a8d0e96f10cd6630~mv2.jpg",
+    "f104f4_07a788573edd48feb36d33d8d6efcd0f~mv2.jpg"
+   ],
+   "gallery_files": [
+    "weidenweg.jpg",
+    "weidenweg-2.jpg",
+    "weidenweg-3.jpg",
+    "weidenweg-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "landschaft-4",
+   "name": "Toskana",
+   "media": "f104f4_486dfbd92f6b4d0589ccf5b283355779~mv2.jpg",
+   "cats": [
+    "home",
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 80x60cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_486dfbd92f6b4d0589ccf5b283355779~mv2.jpg",
+    "f104f4_e4149dd363204cbc87d038c35e0f3c22~mv2.jpg",
+    "f104f4_176a7154c72d4391a26230c96dd4ac1d~mv2.jpg",
+    "f104f4_e68c449263b14c14b618dc7906fc6079~mv2.jpg"
+   ],
+   "gallery_files": [
+    "landschaft-4.jpg",
+    "landschaft-4-2.jpg",
+    "landschaft-4-3.jpg",
+    "landschaft-4-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "wellen-2",
+   "name": "Wasserspiegelungen klein",
+   "media": "f104f4_5b7e3e9a2f5d44f2ac9ad5790218c2c7~mv2.jpg",
+   "cats": [
+    "home",
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 70x60cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_5b7e3e9a2f5d44f2ac9ad5790218c2c7~mv2.jpg",
+    "f104f4_9cdd40e025b346bc9aefccd265d31b11~mv2.jpg",
+    "f104f4_f25e06c93efb4510926cf40d2037896c~mv2.jpg"
+   ],
+   "gallery_files": [
+    "wellen-2.jpg",
+    "wellen-2-2.jpg",
+    "wellen-2-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "tulips-2",
+   "name": "Tulpenmeer",
+   "media": "f104f4_35bdb25d721b4cf69f81b5b33d552d50~mv2.jpg",
+   "cats": [
+    "home",
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 60x50cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_35bdb25d721b4cf69f81b5b33d552d50~mv2.jpg",
+    "f104f4_f5cbc93b36864de188b43d39faeba896~mv2.jpg",
+    "f104f4_1ca4496435ee447d99f2c5fe0446fcb7~mv2.jpg"
+   ],
+   "gallery_files": [
+    "tulips-2.jpg",
+    "tulips-2-2.jpg",
+    "tulips-2-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "landschaft-5",
+   "name": "Traumlandschaft",
+   "media": "f104f4_18caa55ffa2a4678a699aafaba42b135~mv2.jpg",
+   "cats": [
+    "home",
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 80x60cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_18caa55ffa2a4678a699aafaba42b135~mv2.jpg",
+    "f104f4_3cb5338138fe4d3e88e67bd236eb69cf~mv2.jpg",
+    "f104f4_37f9bdd9072d46a1a82f6b8e96364c8e~mv2.jpg",
+    "f104f4_7fd5562b3adc47db8eae254d45c960db~mv2.jpg"
+   ],
+   "gallery_files": [
+    "landschaft-5.jpg",
+    "landschaft-5-2.jpg",
+    "landschaft-5-3.jpg",
+    "landschaft-5-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "zitronen-mit-paprike",
+   "name": "Zitronen mit Paprika",
+   "media": "f104f4_b6a4276a6c68424ebe38176c3dc38023~mv2.jpg",
+   "cats": [
+    "home",
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 60x80cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_b6a4276a6c68424ebe38176c3dc38023~mv2.jpg",
+    "f104f4_cc2d32da284a405bacf72e1f6175495b~mv2.jpg",
+    "f104f4_ccdad8f450ea4f4e84e75c4d65734212~mv2.jpg",
+    "f104f4_ec097a50599d4eb3bf2e11689232d909~mv2.jpg"
+   ],
+   "gallery_files": [
+    "zitronen-mit-paprike.jpg",
+    "zitronen-mit-paprike-2.jpg",
+    "zitronen-mit-paprike-3.jpg",
+    "zitronen-mit-paprike-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "sky",
+   "name": "Himmel",
+   "media": "f104f4_4905d26e13d143d883ab26f6374c2076~mv2.jpg",
+   "cats": [
+    "home",
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 150x80cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_4905d26e13d143d883ab26f6374c2076~mv2.jpg",
+    "f104f4_f668d6a3428d4d5baea0eb6ae8975440~mv2.jpg",
+    "f104f4_c7ddac433d6d4dff8211132530cb4aed~mv2.jpg",
+    "f104f4_24aca51efb05441eb05c54ba7792b7cf~mv2.jpg"
+   ],
+   "gallery_files": [
+    "sky.jpg",
+    "sky-2.jpg",
+    "sky-3.jpg",
+    "sky-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "winterlandschaft",
+   "name": "Winterlandschaft nach Monet",
+   "media": "f104f4_35bc03872222426389ab89dbf73c638b~mv2.jpg",
+   "cats": [
+    "home"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_35bc03872222426389ab89dbf73c638b~mv2.jpg",
+    "f104f4_8f661990fbf040ffbffbeae20d14ca81~mv2.jpg",
+    "f104f4_0c40c6d9597048fdb94df7d15d1d6c26~mv2.jpg"
+   ],
+   "gallery_files": [
+    "winterlandschaft.jpg",
+    "winterlandschaft-2.jpg",
+    "winterlandschaft-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "loewen",
+   "name": "Löwen",
+   "media": "f104f4_11e57043333e4496b70e861acaf8bba6~mv2.jpg",
+   "cats": [
+    "home",
+    "tiermotive"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 70x50cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_11e57043333e4496b70e861acaf8bba6~mv2.jpg",
+    "f104f4_66f18f287dd8433992b4f11412620a86~mv2.jpg",
+    "f104f4_b73f5abcae32465daa989ee89acae519~mv2.jpg",
+    "f104f4_e222cc85e0304459aa454025887d9ffd~mv2.jpg"
+   ],
+   "gallery_files": [
+    "loewen.jpg",
+    "loewen-2.jpg",
+    "loewen-3.jpg",
+    "loewen-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "seerosen-3",
+   "name": "Gelbe Seerosen",
+   "media": "f104f4_00a08ad5437c4218a89d04c7efb443fa~mv2.jpg",
+   "cats": [
+    "home",
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 120x80cm (2 Bilder)"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_00a08ad5437c4218a89d04c7efb443fa~mv2.jpg",
+    "f104f4_82a555a0f3074fe8bda58f7246b1a2f0~mv2.jpg",
+    "f104f4_67fc360c8dd940b48baafeda39f5712d~mv2.jpg",
+    "f104f4_247ac7d9947a4e04949b485f1e4a9cb2~mv2.jpg",
+    "f104f4_242e9ca6478d458595bd73d396751152~mv2.jpg",
+    "f104f4_0c1fab543e1740e480c5878483547e4d~mv2.jpg",
+    "f104f4_9a8fe6075a564c69bef834436bc0a6b4~mv2.jpg",
+    "f104f4_ddd8c944d71f417c99984b06f3dba24b~mv2.jpg",
+    "f104f4_12fc7032325c47f69ed029d7ab1fb511~mv2.jpg"
+   ],
+   "gallery_files": [
+    "seerosen-3.jpg",
+    "seerosen-3-2.jpg",
+    "seerosen-3-3.jpg",
+    "seerosen-3-4.jpg",
+    "seerosen-3-5.jpg",
+    "seerosen-3-6.jpg",
+    "seerosen-3-7.jpg",
+    "seerosen-3-8.jpg",
+    "seerosen-3-9.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "blaetter",
+   "name": "Blätter",
+   "media": "f104f4_404288b998b943db82465c824654ef8f~mv2.jpg",
+   "cats": [
+    "home",
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Öl auf Leiwand, 70x80cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_404288b998b943db82465c824654ef8f~mv2.jpg",
+    "f104f4_0a9daf2ddbff4158afb3108e31dac670~mv2.jpg",
+    "f104f4_cb472c71cb51491f947bac01c11813d5~mv2.jpg",
+    "f104f4_5834a207c327458997b0c62e805567ae~mv2.jpg",
+    "f104f4_7cc2fec5e9df430a8e672c5b6db1f8a4~mv2.jpg",
+    "f104f4_5f50cb100d6d4a13972605e5e71a7ade~mv2.jpg"
+   ],
+   "gallery_files": [
+    "blaetter.jpg",
+    "blaetter-2.jpg",
+    "blaetter-3.jpg",
+    "blaetter-4.jpg",
+    "blaetter-6.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "blumen-4-1",
+   "name": "Exotische Blumen",
+   "media": "f104f4_755d43235ba946d285393e002d68bc16~mv2.jpg",
+   "cats": [
+    "home",
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 60x100cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_755d43235ba946d285393e002d68bc16~mv2.jpg",
+    "f104f4_c4e65fb8aa804728b2979927bb16636b~mv2.jpg",
+    "f104f4_31b01a432629440aa01fbc0979344454~mv2.jpg"
+   ],
+   "gallery_files": [
+    "blumen-4-1.jpg",
+    "blumen-4-1-2.jpg",
+    "blumen-4-1-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "wueste-2",
+   "name": "Wüstenlandschaft",
+   "media": "f104f4_3c0e6ce75d9b47c98ca3c7d19257a1de~mv2.jpg",
+   "cats": [
+    "home",
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 80x120cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_3c0e6ce75d9b47c98ca3c7d19257a1de~mv2.jpg",
+    "f104f4_65da5cc871944bafa62a2ebbf0121e6b~mv2.jpg",
+    "f104f4_1b794399add04ffab6db191429d761ae~mv2.jpg",
+    "f104f4_4374f901f3b440d8b545a62b284c4a7b~mv2.jpg"
+   ],
+   "gallery_files": [
+    "wueste-2.jpg",
+    "wueste-2-2.jpg",
+    "wueste-2-3.jpg",
+    "wueste-2-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "dame-1",
+   "name": "Madame",
+   "media": "f104f4_4029294268044bd082566c30f25f6ab2~mv2.jpg",
+   "cats": [
+    "home",
+    "menschen"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand , 60x100cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_4029294268044bd082566c30f25f6ab2~mv2.jpg",
+    "f104f4_9eec4d514cb047b2a5f486545868069c~mv2.jpg",
+    "f104f4_781b3a6c9d1d4d6bb0505abeddb5273e~mv2.jpg",
+    "f104f4_f8fc4cc6398743d2a5dc63997782be02~mv2.jpg"
+   ],
+   "gallery_files": [
+    "dame-1.jpg",
+    "dame-1-2.jpg",
+    "dame-1-3.jpg",
+    "dame-1-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "sonnenuntergang-an-kueste",
+   "name": "Sonnenuntergang",
+   "media": "f104f4_71c32c79d7fe4be3a9b87d382d933b19~mv2.jpg",
+   "cats": [
+    "home"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_71c32c79d7fe4be3a9b87d382d933b19~mv2.jpg",
+    "f104f4_6c7b7673693a41c9a0e6f0711286799c~mv2.jpg",
+    "f104f4_b74542f538ad4a46ba42f53884ac85f8~mv2.jpg",
+    "f104f4_4e17f6fcc14f4cdd995f3d712243a1b9~mv2.jpg"
+   ],
+   "gallery_files": [
+    "sonnenuntergang-an-kueste.jpg",
+    "sonnenuntergang-an-kueste-2.jpg",
+    "sonnenuntergang-an-kueste-3.jpg",
+    "sonnenuntergang-an-kueste-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "wueste",
+   "name": "Nomaden",
+   "media": "f104f4_d615afd19a6946309ae4e9ee02439065~mv2.jpg",
+   "cats": [
+    "home"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_d615afd19a6946309ae4e9ee02439065~mv2.jpg",
+    "f104f4_0321258b420c4de891633be32d911cd3~mv2.jpg",
+    "f104f4_f42edcdea4e342979ecbdc2c61437807~mv2.jpg",
+    "f104f4_452cd4847fa048beaada1bebd990f71b~mv2.jpg",
+    "f104f4_0eab93ecd21b44f399e59f4062773779~mv2.jpg",
+    "f104f4_683cc20890074b6898a88c50e6c6dd5b~mv2.jpg",
+    "f104f4_2bb1b52f2ef345909b49dc438dfb3f70~mv2.jpg"
+   ],
+   "gallery_files": [
+    "wueste.jpg",
+    "wueste-7.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "taenzerin3",
+   "name": "Jazz Dancer",
+   "media": "f104f4_d27de7393c464a22b614a76344ede15f~mv2.jpg",
+   "cats": [
+    "home",
+    "menschen"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "60 x 60 cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_d27de7393c464a22b614a76344ede15f~mv2.jpg",
+    "f104f4_5ba429bee3194ffab0ccf98d843bf218~mv2.jpg",
+    "f104f4_6368a85735df4a69b016ec6bd3b6afd4~mv2.jpg",
+    "f104f4_f7689a2a22e14bb1bf4b5cd830f14e8c~mv2.jpg",
+    "f104f4_41ebc0f871cc466e8ee3679ae99dd1b0~mv2.jpg",
+    "f104f4_8e8e0d95093b4d8ea90b48393bfd9b7b~mv2.jpg",
+    "f104f4_fb7022e512f240019195f634ecfad009~mv2.jpg"
+   ],
+   "gallery_files": [
+    "taenzerin3.jpg",
+    "taenzerin3-2.jpg",
+    "taenzerin3-3.jpg",
+    "taenzerin3-4.jpg",
+    "taenzerin3-5.jpg",
+    "taenzerin3-6.jpg",
+    "taenzerin3-7.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "meeresspiel-2",
+   "name": "Meeresspiel 2",
+   "media": "f104f4_6108a90119604b998998e19b4a445dbd~mv2.jpg",
+   "cats": [
+    "home"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "40 x 40 cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_6108a90119604b998998e19b4a445dbd~mv2.jpg",
+    "f104f4_d66ec74374214e5298c2222ab9959292~mv2.jpg",
+    "f104f4_6df486ad44d2444c9e4df2b936000c55~mv2.jpg"
+   ],
+   "gallery_files": [
+    "meeresspiel-2.jpg",
+    "meeresspiel-2-2.jpg",
+    "meeresspiel-2-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "meeresspiel",
+   "name": "Wasserspiegelungen groß",
+   "media": "f104f4_d18dfd1b711a4f0a8a619fc0d1c2a0b0~mv2.jpg",
+   "cats": [
+    "home",
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "120x160cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_d18dfd1b711a4f0a8a619fc0d1c2a0b0~mv2.jpg",
+    "f104f4_cbd15b9130254378a8240872e5884af0~mv2.jpg",
+    "f104f4_05d19a20d6c8400a94634c738399eb46~mv2.jpg",
+    "f104f4_dae6853726a34958be3f8c0c49217778~mv2.jpg"
+   ],
+   "gallery_files": [
+    "meeresspiel.jpg",
+    "meeresspiel-img2.jpg",
+    "meeresspiel-3.jpg",
+    "meeresspiel-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "taenzerin-1",
+   "name": "Flamenco Tänzerin 2",
+   "media": "f104f4_5e1a08ff83404e39b037257253aaac9d~mv2.jpg",
+   "cats": [
+    "home",
+    "menschen"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "80 x 120 cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_5e1a08ff83404e39b037257253aaac9d~mv2.jpg",
+    "f104f4_2e2ed30f833a44a89d39fa260620130e~mv2.jpg",
+    "f104f4_784047410ffd4cbc958021bf9c234db3~mv2.jpg"
+   ],
+   "gallery_files": [
+    "taenzerin-1.jpg",
+    "taenzerin-1-2.jpg",
+    "taenzerin-1-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "dame-2",
+   "name": "Model",
+   "media": "f104f4_7e220dc78a3f42abb7c8e5e43817cc8a~mv2.jpg",
+   "cats": [
+    "home",
+    "menschen"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_7e220dc78a3f42abb7c8e5e43817cc8a~mv2.jpg",
+    "f104f4_00c3697fe13441b28bfd693dc0282a0c~mv2.jpg",
+    "f104f4_f36ee249d6d94079a9e9e1019e2b1be2~mv2.jpg",
+    "f104f4_b5b309ea59d34014b8280529b6e193f7~mv2.jpg"
+   ],
+   "gallery_files": [
+    "dame-2.jpg",
+    "dame-2-2.jpg",
+    "dame-2-3.jpg",
+    "dame-2-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "junge",
+   "name": "Tibetischer Junge",
+   "media": "f104f4_b6f5a87b5cb6484a916934fbdaceb50b~mv2.jpg",
+   "cats": [
+    "home",
+    "menschen"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "80x80cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_b6f5a87b5cb6484a916934fbdaceb50b~mv2.jpg",
+    "f104f4_f902dea1bbf444fba2ef4942bc6e4694~mv2.jpg",
+    "f104f4_9a7e7bb07e534a8896104edbf4cbfe56~mv2.jpg",
+    "f104f4_adade8e8dc6448b68ea9b7fedb24cfe4~mv2.jpg"
+   ],
+   "gallery_files": [
+    "junge.jpg",
+    "junge-2.jpg",
+    "junge-3.jpg",
+    "junge-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "abstrakt-4",
+   "name": "Abstrakt 2",
+   "media": "f104f4_da7fd66e5c6d42d2a4cc2325856f432f~mv2.jpg",
+   "cats": [
+    "abstrakt"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 80x100cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_da7fd66e5c6d42d2a4cc2325856f432f~mv2.jpg",
+    "f104f4_1e40cae587d6495f8eb504d356eaa2ab~mv2.jpg",
+    "f104f4_740af94c2f82412b8401e01825f135f0~mv2.jpg",
+    "f104f4_621ca8d8e164444fbea84356785374c7~mv2.jpg",
+    "f104f4_0c2333958e144c418f998acec531c6ca~mv2.jpg"
+   ],
+   "gallery_files": [
+    "abstrakt-4.jpg",
+    "abstrakt-4-2.jpg",
+    "abstrakt-4-3.jpg",
+    "abstrakt-4-4.jpg",
+    "abstrakt-4-5.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "abstrakt-3",
+   "name": "Abstrakt 3",
+   "media": "f104f4_7a8b87a7c0c54934bf82a020c32fc15e~mv2.jpg",
+   "cats": [
+    "abstrakt"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_7a8b87a7c0c54934bf82a020c32fc15e~mv2.jpg",
+    "f104f4_bdc630858aa247f892c232333251ecac~mv2.jpg",
+    "f104f4_407e888f1f6a42a9b2d60da2d2ca79db~mv2.jpg",
+    "f104f4_681de8a3cd5c491f8eafab6e5b599a37~mv2.jpg",
+    "f104f4_a1415fb4720c44229dc9a91e807e3887~mv2.jpg",
+    "f104f4_80bc4a42548b4c7a80c24d8464cf2a7c~mv2.jpg",
+    "f104f4_01bfa72392624ee0ab337a829b04c93f~mv2.jpg"
+   ],
+   "gallery_files": [
+    "abstrakt-3.jpg",
+    "abstrakt-3-2.jpg",
+    "abstrakt-3-3.jpg",
+    "abstrakt-3-4.jpg",
+    "abstrakt-3-5.jpg",
+    "abstrakt-3-6.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "abstrakt-2",
+   "name": "Wildblumen",
+   "media": "f104f4_caadc60da976454ebdccdb05f3311974~mv2.jpg",
+   "cats": [
+    "abstrakt",
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 110x110cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_caadc60da976454ebdccdb05f3311974~mv2.jpg",
+    "f104f4_5512de55419e4325aa7de3e6507edfc0~mv2.jpg",
+    "f104f4_c4fec2415d0e42c1a5ad64fb7305149d~mv2.jpg",
+    "f104f4_ce5473e1d6e9424ca7874202156e35db~mv2.jpg",
+    "f104f4_ae022d261e2944cfb8eb9c29df720d2d~mv2.jpg"
+   ],
+   "gallery_files": [
+    "abstrakt-2.jpg",
+    "abstrakt-2-2.jpg",
+    "abstrakt-2-3.jpg",
+    "abstrakt-2-4.jpg",
+    "abstrakt-2-5.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "abstrakt",
+   "name": "Abstrakt nach Kandinsky",
+   "media": "f104f4_47e42a5d690d425baa1e36bde25fa0f2~mv2.jpg",
+   "cats": [
+    "abstrakt"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "70x100cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_47e42a5d690d425baa1e36bde25fa0f2~mv2.jpg",
+    "f104f4_b1769ddce7fc4ec4bfcced93a2de20fa~mv2.jpg",
+    "f104f4_f299aa4f3cd54cf18ca6ad66262d4811~mv2.jpg",
+    "f104f4_ffffd9451241457e920e00e4605a2172~mv2.jpg",
+    "f104f4_2259ffba6a774804bd461333f71e7f70~mv2.jpg",
+    "f104f4_40c1143146134dabaad700d745f71a01~mv2.jpg",
+    "f104f4_6495c10d1bbf41d69af86147136ee861~mv2.jpg"
+   ],
+   "gallery_files": [
+    "abstrakt.jpg",
+    "abstrakt-img2.jpg",
+    "abstrakt-img3.jpg",
+    "abstrakt-img4.jpg",
+    "abstrakt-5.jpg",
+    "abstrakt-6.jpg",
+    "abstrakt-7.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "blaues-feuer",
+   "name": "Abstrakt 4 Grautöne",
+   "media": "f104f4_d9d207017c014350a22e4a1ba3e7e53c~mv2.jpg",
+   "cats": [
+    "abstrakt"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "90x60cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_d9d207017c014350a22e4a1ba3e7e53c~mv2.jpg",
+    "f104f4_dcf0bd12a5644b6eb632912d89dd0e05~mv2.jpg",
+    "f104f4_d74605cf1a9943538d969fc039dd1d03~mv2.jpg"
+   ],
+   "gallery_files": [
+    "blaues-feuer.jpg",
+    "blaues-feuer-2.jpg",
+    "blaues-feuer-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "rotes-feuer",
+   "name": "Abstrakt 5 Rottöne",
+   "media": "f104f4_1a2754c8ed754a23891e7c873fafb4c6~mv2.jpg",
+   "cats": [
+    "abstrakt"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "80x60cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_1a2754c8ed754a23891e7c873fafb4c6~mv2.jpg",
+    "f104f4_5428d87ddda0439f8de6b4d307527cc5~mv2.jpg",
+    "f104f4_8eae7f9ba0e24dfc81a94f7a37878284~mv2.jpg",
+    "f104f4_ed14f096710548c0944190fa44ba60b1~mv2.jpg",
+    "f104f4_c269271f22fa4428af004c4f5ea6a842~mv2.jpg"
+   ],
+   "gallery_files": [
+    "rotes-feuer.jpg",
+    "rotes-feuer-2.jpg",
+    "rotes-feuer-3.jpg",
+    "rotes-feuer-4.jpg",
+    "rotes-feuer-5.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "circle-squares",
+   "name": "Circle & Squares",
+   "media": "f104f4_cebbe311c4764b6391a729807238fa02~mv2.jpg",
+   "cats": [
+    "abstrakt"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "2x 20x20cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_cebbe311c4764b6391a729807238fa02~mv2.jpg",
+    "f104f4_36c5842fde83456490165d12473e3e71~mv2.jpg",
+    "f104f4_19c566646b734f60949fecb0e4573814~mv2.jpg"
+   ],
+   "gallery_files": [
+    "circle-squares.jpg",
+    "circle-squares-2.jpg",
+    "circle-squares-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "geroell-2",
+   "name": "Abstrakt",
+   "media": "f104f4_5c395a38d1a348d0b908f06cfcd4792b~mv2.jpg",
+   "cats": [
+    "abstrakt"
+   ],
+   "medium_size": [
+    "Acryl auf Pappe,",
+    "50x60cm(29x30cm ohne Passepartout)"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_5c395a38d1a348d0b908f06cfcd4792b~mv2.jpg",
+    "f104f4_22a52384093747c4bc854dcbddc31a31~mv2.jpg"
+   ],
+   "gallery_files": [
+    "geroell-2.jpg",
+    "geroell-2-2.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "geroell",
+   "name": "Äste",
+   "media": "f104f4_c735e506c21f46c9a5e7af0f48601ccb~mv2.jpg",
+   "cats": [
+    "abstrakt"
+   ],
+   "medium_size": [
+    "Acryl auf Pappe",
+    "50x70cm (34x46cm ohne Passepartout)"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_c735e506c21f46c9a5e7af0f48601ccb~mv2.jpg",
+    "f104f4_5dbaf82b1e944e0b9790bcc561a81114~mv2.jpg"
+   ],
+   "gallery_files": [
+    "geroell.jpg",
+    "geroell-img2.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "dom",
+   "name": "Kölner Dom",
+   "media": "f104f4_d51c7de8f0734cc5a1a8686045878437~mv2.jpg",
+   "cats": [
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand"
+   ],
+   "price": "VERKAUFT",
+   "media_all": [
+    "f104f4_d51c7de8f0734cc5a1a8686045878437~mv2.jpg",
+    "f104f4_6bca29b0851740258411c62f3eefce6a~mv2.jpg",
+    "f104f4_c6f78fc62be144f7a540da61c2ec842e~mv2.jpg",
+    "f104f4_b82d67408a494974aeced50bea1d74a5~mv2.jpg",
+    "f104f4_7fc3db5bf9694393a4ab496cd99b65be~mv2.jpg"
+   ],
+   "gallery_files": [
+    "dom.jpg",
+    "dom-2.jpg",
+    "dom-3.jpg",
+    "dom-4.jpg",
+    "dom-5.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "blaues-dorf-am-meer",
+   "name": "Stadt am Meer",
+   "media": "f104f4_aee6bdd26560431a958f1b0e397aabe8~mv2.jpg",
+   "cats": [
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 60x80cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_aee6bdd26560431a958f1b0e397aabe8~mv2.jpg",
+    "f104f4_df1d771d944e41b0ae0aa0759e7da806~mv2.jpg",
+    "f104f4_b1d7564cd3934325ab635168955ddb93~mv2.jpg",
+    "f104f4_16b9b22d525e40ca9d494e643182a39a~mv2.jpg",
+    "f104f4_21709e3cbd1545898edf49ae71e24631~mv2.jpg",
+    "f104f4_e96b0288ae4d452ab5019f10d41c9f1b~mv2.jpg"
+   ],
+   "gallery_files": [
+    "blaues-dorf-am-meer.jpg",
+    "blaues-dorf-am-meer-2.jpg",
+    "blaues-dorf-am-meer-3.jpg",
+    "blaues-dorf-am-meer-4.jpg",
+    "blaues-dorf-am-meer-5.jpg",
+    "blaues-dorf-am-meer-6.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "allee",
+   "name": "Herbst Landschaft",
+   "media": "f104f4_5a36d10988824b9d8373f1fd65194ad4~mv2.jpg",
+   "cats": [
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 50x60cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_5a36d10988824b9d8373f1fd65194ad4~mv2.jpg",
+    "f104f4_dea914b7823a4b4f94ac5882700f1fd7~mv2.jpg",
+    "f104f4_be32d2ac4ed44bd69cddb55f8f5b31b8~mv2.jpg",
+    "f104f4_65d67561202a48b5a06430954b90f6db~mv2.jpg"
+   ],
+   "gallery_files": [
+    "allee.jpg",
+    "allee-2.jpg",
+    "allee-3.jpg",
+    "allee-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "blaues-dorf-2",
+   "name": "Häuser in Norwegen",
+   "media": "f104f4_3532a0651d2b450fa3e1bf2b845a0326~mv2.jpg",
+   "cats": [
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 70x40cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_3532a0651d2b450fa3e1bf2b845a0326~mv2.jpg",
+    "f104f4_77b0bb42a5ab4b83b1af84cdac278230~mv2.jpg",
+    "f104f4_ea3bb0794e964a10a90ea56a77ade19f~mv2.jpg"
+   ],
+   "gallery_files": [
+    "blaues-dorf-2.jpg",
+    "blaues-dorf-2-2.jpg",
+    "blaues-dorf-2-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "taenzerin-4",
+   "name": "Ballerina in New York",
+   "media": "f104f4_04d467f36678460a94a8c4efcc7413fb~mv2.jpg",
+   "cats": [
+    "menschen"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "80 x 100 cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_04d467f36678460a94a8c4efcc7413fb~mv2.jpg",
+    "f104f4_bbb8461cd04249eaa82f8d6fd3eab03a~mv2.jpg"
+   ],
+   "gallery_files": [
+    "taenzerin-4.jpg",
+    "taenzerin-4-2.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "friends-2",
+   "name": "Spielende Kinder",
+   "media": "f104f4_d20ec14e269a406685584533ea6f911e~mv2.jpg",
+   "cats": [
+    "menschen"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 60x80cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_d20ec14e269a406685584533ea6f911e~mv2.jpg",
+    "f104f4_da8fad86c7ce4b6d8244250de9ad999f~mv2.jpg",
+    "f104f4_568f1dc2fe7549059576be80b9c46d7b~mv2.jpg",
+    "f104f4_9d491cfe879b44c3b09bda0fc2043693~mv2.jpg"
+   ],
+   "gallery_files": [
+    "friends-2.jpg",
+    "friends-2-2.jpg",
+    "friends-2-3.jpg",
+    "friends-2-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "friends",
+   "name": "Friends",
+   "media": "f104f4_1ef7982836ff43afb4af917615837c72~mv2.jpg",
+   "cats": [
+    "menschen"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_1ef7982836ff43afb4af917615837c72~mv2.jpg",
+    "f104f4_88ad9fe5910f4efea942e470e17e2de0~mv2.jpg",
+    "f104f4_b889799f8a51419d98d752acdacbbc27~mv2.jpg"
+   ],
+   "gallery_files": [
+    "friends.jpg",
+    "friends-img2.jpg",
+    "friends-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "paprika",
+   "name": "Paprika",
+   "media": "f104f4_9aed84a10cf24266a350ba3f13f0dd4e~mv2.jpg",
+   "cats": [
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "50x60cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_9aed84a10cf24266a350ba3f13f0dd4e~mv2.jpg",
+    "f104f4_57f52fe8b6d34f73912d998313133284~mv2.jpg",
+    "f104f4_eb36f6c413994111856fa5ec0436a1c0~mv2.jpg"
+   ],
+   "gallery_files": [
+    "paprika.jpg",
+    "paprika-2.jpg",
+    "paprika-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "aepfel",
+   "name": "Äpfel mit Nüssen",
+   "media": "f104f4_b5d08409f12e41f09fcecc5d250871c6~mv2.jpg",
+   "cats": [
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 60x50cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_b5d08409f12e41f09fcecc5d250871c6~mv2.jpg",
+    "f104f4_228253e5753945548ce0f2596a04a6db~mv2.jpg",
+    "f104f4_e7033f21970540e89e7134ac70b62137~mv2.jpg",
+    "f104f4_679ce755d4b347069b1f3cdf05efb5a5~mv2.jpg"
+   ],
+   "gallery_files": [
+    "aepfel.jpg",
+    "aepfel-2.jpg",
+    "aepfel-3.jpg",
+    "aepfel-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "gruene-mangos",
+   "name": "Papayas",
+   "media": "f104f4_97cdba5c39604fa880ba6e0084002fbb~mv2.jpg",
+   "cats": [
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 60x80cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_97cdba5c39604fa880ba6e0084002fbb~mv2.jpg",
+    "f104f4_0b335b5ea3934bbcb6b2ef2a9abd58ed~mv2.jpg",
+    "f104f4_176b0d2cb946487faf4bb6ad7e814128~mv2.jpg",
+    "f104f4_5736ab51cd594f98853aa015e1a22a05~mv2.jpg"
+   ],
+   "gallery_files": [
+    "gruene-mangos.jpg",
+    "gruene-mangos-2.jpg",
+    "gruene-mangos-3.jpg",
+    "gruene-mangos-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "rote-blumen",
+   "name": "Blumenstrauß",
+   "media": "f104f4_22f465d4d7c34c4da4232a1d4a43e8ab~mv2.jpg",
+   "cats": [
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 80x80cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_22f465d4d7c34c4da4232a1d4a43e8ab~mv2.jpg",
+    "f104f4_4ee3c2bf42e04534a081a7b64ca88776~mv2.jpg",
+    "f104f4_38b1238c4a05404e8f9c7291934fe730~mv2.jpg",
+    "f104f4_79eedc0ad7044f86bf0ab30fa9ceffe2~mv2.jpg",
+    "f104f4_8737db6c75ae4e1c9cb0cbedb6a98d34~mv2.jpg",
+    "f104f4_de926869235d47c781f102643ecc326b~mv2.jpg"
+   ],
+   "gallery_files": [
+    "rote-blumen.jpg",
+    "rote-blumen-2.jpg",
+    "rote-blumen-3.jpg",
+    "rote-blumen-4.jpg",
+    "rote-blumen-5.jpg",
+    "rote-blumen-6.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "seerosen-2",
+   "name": "Weiße Seerosen",
+   "media": "f104f4_c70745ea8f324082a6088065539eef54~mv2.jpg",
+   "cats": [
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "150x90cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_c70745ea8f324082a6088065539eef54~mv2.jpg",
+    "f104f4_74be770489c245e3bf789436bfff2d76~mv2.jpg",
+    "f104f4_97420cfbbacc4d369815fc7fe7565d0c~mv2.jpg",
+    "f104f4_c786f693f30e40d6a52fa4f6820d8030~mv2.jpg",
+    "f104f4_2ad05655ada940dca1daad8446d2cdf3~mv2.jpg",
+    "f104f4_ee3585a86b8a4bc78fc2267e0548363b~mv2.jpg",
+    "f104f4_72d6696161434314938bf379382a5aa7~mv2.jpg"
+   ],
+   "gallery_files": [
+    "seerosen-2.jpg",
+    "seerosen-2-2.jpg",
+    "seerosen-2-3.jpg",
+    "seerosen-2-4.jpg",
+    "seerosen-2-5.jpg",
+    "seerosen-2-7.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "seerosen-1",
+   "name": "Rote Rose",
+   "media": "f104f4_49573edaaa93490aac151907c615ed6a~mv2.jpg",
+   "cats": [
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 70x50cm mit schwarzem Holzrahmen"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_49573edaaa93490aac151907c615ed6a~mv2.jpg",
+    "f104f4_75ee881a0bec495e84d4790b073abae0~mv2.jpg",
+    "f104f4_3f01859c36ba4cc180946bee5e821276~mv2.jpg"
+   ],
+   "gallery_files": [
+    "seerosen-1.jpg",
+    "seerosen-1-2.jpg",
+    "seerosen-1-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "cats-2-mit-blumen",
+   "name": "Katze hinter Blumen",
+   "media": "f104f4_1f5c906e9ed74e73a22b5748abf40eaf~mv2.jpg",
+   "cats": [
+    "tiermotive"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "40x80cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_1f5c906e9ed74e73a22b5748abf40eaf~mv2.jpg",
+    "f104f4_e7c20ccbbb2b4a48b92aed8abd81c2bb~mv2.jpg",
+    "f104f4_4bbf41036fa4452882c16a26ff3f088e~mv2.jpg",
+    "f104f4_0c836b24311e4e4e8756ceede00d3e99~mv2.jpg"
+   ],
+   "gallery_files": [
+    "cats-2-mit-blumen.jpg",
+    "cats-2-mit-blumen-2.jpg",
+    "cats-2-mit-blumen-3.jpg",
+    "cats-2-mit-blumen-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "cats-1",
+   "name": "Katzen",
+   "media": "f104f4_c1520e6edd0c4c81a22f4661720cb088~mv2.jpg",
+   "cats": [
+    "tiermotive"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "2x 30x24cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_c1520e6edd0c4c81a22f4661720cb088~mv2.jpg",
+    "f104f4_98dd80b7ae8b40cb984847cb9016843e~mv2.jpg",
+    "f104f4_44a1c56706d042fea93a78e7be622931~mv2.jpg",
+    "f104f4_f6777b4173864b69acabdaf88bd735f5~mv2.jpg"
+   ],
+   "gallery_files": [
+    "cats-1.jpg",
+    "cats-1-2.jpg",
+    "cats-1-3.jpg",
+    "cats-1-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "bieber",
+   "name": "Der Bieber und seine Freunde",
+   "media": "f104f4_5765b02559804941b61de2c84b25f086~mv2.jpg",
+   "cats": [
+    "tiermotive"
+   ],
+   "medium_size": [
+    "Öl/Acryl auf Leinwand",
+    "3x 20x20cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_5765b02559804941b61de2c84b25f086~mv2.jpg",
+    "f104f4_ed389476c3104363bfdf45eb8bcfd0a8~mv2.jpg",
+    "f104f4_dca2b86fa33f425aad08ad921faa0671~mv2.jpg",
+    "f104f4_1042773b6a544d1ca789ad727d4e34eb~mv2.jpg"
+   ],
+   "gallery_files": [
+    "bieber.jpg",
+    "bieber-2.jpg",
+    "bieber-3.jpg",
+    "bieber-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "elefefant",
+   "name": "Elefant",
+   "media": "f104f4_108e1f1abfff4db4b983eaf53638f753~mv2.jpg",
+   "cats": [
+    "tiermotive"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand",
+    "20x20cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_108e1f1abfff4db4b983eaf53638f753~mv2.jpg",
+    "f104f4_8997775ab75d4d479ca0de08a374e006~mv2.jpg"
+   ],
+   "gallery_files": [
+    "elefefant.jpg",
+    "elefefant-2.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "sturm-2",
+   "name": "Delphin",
+   "media": "f104f4_aeb01ed8ddd4416e8cec25e63c270a87~mv2.jpg",
+   "cats": [
+    "tiermotive"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_aeb01ed8ddd4416e8cec25e63c270a87~mv2.jpg",
+    "f104f4_5074c121991f4f9ebb9f196482a3d21b~mv2.jpg",
+    "f104f4_db4d4e44b0e946e0a343b01e58d930b0~mv2.jpg"
+   ],
+   "gallery_files": [
+    "sturm-2.jpg",
+    "sturm-2-2.jpg",
+    "sturm-2-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "hausdaecher",
+   "name": "Hausdächer",
+   "media": "f104f4_c2d53b7a56714440b669de23e30dd066~mv2.jpg",
+   "cats": [
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell",
+    "62x52cm (49x35cm ohne Passepartout)"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_c2d53b7a56714440b669de23e30dd066~mv2.jpg",
+    "f104f4_6339469ae54e427ca06ada568d1deae5~mv2.jpg"
+   ],
+   "gallery_files": [
+    "hausdaecher.jpg",
+    "hausdaecher-2.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "gasse-mit-bruecke-2",
+   "name": "Grasse",
+   "media": "f104f4_0081c901b05c4c28aff0dcf611e87f7f~mv2.jpg",
+   "cats": [
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_0081c901b05c4c28aff0dcf611e87f7f~mv2.jpg",
+    "f104f4_8292588b10124d38b0eb43f0f417c6be~mv2.jpg",
+    "f104f4_df5637d3f0a04fa18565fa3e71a21d2e~mv2.jpg",
+    "f104f4_f6afc3f0616f446589be40bc52afadce~mv2.jpg"
+   ],
+   "gallery_files": [
+    "gasse-mit-bruecke-2.jpg",
+    "gasse-mit-bruecke-2-2.jpg",
+    "gasse-mit-bruecke-2-3.jpg",
+    "gasse-mit-bruecke-2-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "kuestenstreifen",
+   "name": "Küstenstreifen Türkei",
+   "media": "f104f4_c1d6fcb8eba0442181696d626ff85fdf~mv2.jpg",
+   "cats": [
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell",
+    "50x60cm (34x46cm ohne Passepartout)"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_c1d6fcb8eba0442181696d626ff85fdf~mv2.jpg",
+    "f104f4_12391e85526d453ea5dcd1113a5e1354~mv2.jpg"
+   ],
+   "gallery_files": [
+    "kuestenstreifen.jpg",
+    "kuestenstreifen-2.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "blumen-4",
+   "name": "Mohnblumen",
+   "media": "f104f4_22888a50c6ba45638fd74c4b100716f5~mv2.jpg",
+   "cats": [
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_22888a50c6ba45638fd74c4b100716f5~mv2.jpg",
+    "f104f4_e969278836f7459cb37a927a6bf68a76~mv2.jpg",
+    "f104f4_dc49677aa3c846d48fb5aa78e1264109~mv2.jpg",
+    "f104f4_d375ccd83c714950b56c1b224ddea1dd~mv2.jpg"
+   ],
+   "gallery_files": [
+    "blumen-4.jpg",
+    "blumen-4-2.jpg",
+    "blumen-4-3.jpg",
+    "blumen-4-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "kussmund",
+   "name": "Kiss Me",
+   "media": "f104f4_66f689c1e0e94dd98237c55c8be28463~mv2.jpg",
+   "cats": [
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell",
+    "50x60cm (30x41cm ohne Passepartout)"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_66f689c1e0e94dd98237c55c8be28463~mv2.jpg",
+    "f104f4_7bad3edf682740d3aa667e10dcf4c0d9~mv2.jpg",
+    "f104f4_7c480b3b772744209cbce422220eff4a~mv2.jpg",
+    "f104f4_81fa19df71924e63acc6ae47aa89706a~mv2.jpg"
+   ],
+   "gallery_files": [
+    "kussmund.jpg",
+    "kussmund-2.jpg",
+    "kussmund-3.jpg",
+    "kussmund-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "blumen-2",
+   "name": "Blumen in Vase",
+   "media": "f104f4_fb9a2f9da91b45c995770ff28135baf6~mv2.jpg",
+   "cats": [
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell",
+    "50x70cm (29x39cm ohne Passepartout)"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_fb9a2f9da91b45c995770ff28135baf6~mv2.jpg",
+    "f104f4_65f4838369314422b5731162e66efda7~mv2.jpg",
+    "f104f4_42aeb791e9be461aadffe3ed448b5ae9~mv2.jpg"
+   ],
+   "gallery_files": [
+    "blumen-2.jpg",
+    "blumen-2-2.jpg",
+    "blumen-2-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "sonnenblumen",
+   "name": "Sonnenblumen",
+   "media": "f104f4_f02d85279e9f441b881e8b6690794de1~mv2.jpg",
+   "cats": [
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell",
+    "50x40cm (38x28cm ohne Passepartout)"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_f02d85279e9f441b881e8b6690794de1~mv2.jpg",
+    "f104f4_722ddcdbb5374d09a34394263a1e3e4f~mv2.jpg",
+    "f104f4_989c1d037eed45ee92ab767c15ad62fc~mv2.jpg"
+   ],
+   "gallery_files": [
+    "sonnenblumen.jpg",
+    "sonnenblumen-2.jpg",
+    "sonnenblumen-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "blumen-1",
+   "name": "Rosen",
+   "media": "f104f4_6fe0f8672ec242c787b690aa91716881~mv2.jpg",
+   "cats": [
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell",
+    "60x50cm (40x29cm ohne Passepartout)"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_6fe0f8672ec242c787b690aa91716881~mv2.jpg",
+    "f104f4_c65f896b233146c58bbf25bd510b9be6~mv2.jpg",
+    "f104f4_f238a467168e40899449241507fa6b2a~mv2.jpg",
+    "f104f4_14adbb4c38b044c98ff08c7ad6047985~mv2.jpg"
+   ],
+   "gallery_files": [
+    "blumen-1.jpg",
+    "blumen-1-2.jpg",
+    "blumen-1-3.jpg",
+    "blumen-1-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "hagebutten",
+   "name": "Äpfel",
+   "media": "f104f4_765ef440815648ffb2753c86a582ebbe~mv2.jpg",
+   "cats": [
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell",
+    "50x40cm (37x28cm ohne Passepartout)"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_765ef440815648ffb2753c86a582ebbe~mv2.jpg",
+    "f104f4_47fd016d9d1d474ebc4ebf41d2a5952a~mv2.jpg"
+   ],
+   "gallery_files": [
+    "hagebutten.jpg",
+    "hagebutten-2.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "gasse-mit-bruecke",
+   "name": "Das Tor",
+   "media": "f104f4_f1370213a4a648df8a26512712a2ba5a~mv2.jpg",
+   "cats": [
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell",
+    "40x50cm (28x38cm ohne Passepartout)"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_f1370213a4a648df8a26512712a2ba5a~mv2.jpg",
+    "f104f4_1983d12fca1c4935b74df4f990d48c8a~mv2.jpg",
+    "f104f4_090f41b74c9e4c0f826355235bf18ea7~mv2.jpg"
+   ],
+   "gallery_files": [
+    "gasse-mit-bruecke.jpg",
+    "gasse-mit-bruecke-img2.jpg",
+    "gasse-mit-bruecke-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "tulpis",
+   "name": "Tulpen",
+   "media": "f104f4_8b28cdcadd61406da6d31ba583f5dc67~mv2.jpg",
+   "cats": [
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell",
+    "60x50cm (34c27cm ohne Passepartout)"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_8b28cdcadd61406da6d31ba583f5dc67~mv2.jpg",
+    "f104f4_78d0c5dae9dd4e2f897ac1c17cb99f87~mv2.jpg",
+    "f104f4_bbf5b5261b0c422fa3c18adab3b127b2~mv2.jpg",
+    "f104f4_a12905f90824443a9a6806e21d9a72cf~mv2.jpg"
+   ],
+   "gallery_files": [
+    "tulpis.jpg",
+    "tulpis-2.jpg",
+    "tulpis-3.jpg",
+    "tulpis-4.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "blaue-berge",
+   "name": "Blaue Berge",
+   "media": "f104f4_32bf61fb91c54075bdad64e94d317f84~mv2.jpg",
+   "cats": [
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_32bf61fb91c54075bdad64e94d317f84~mv2.jpg",
+    "f104f4_be46ecf529d74b62a931a1507d101405~mv2.jpg",
+    "f104f4_bbb6adcc782e46ffa26466c2677e71fc~mv2.jpg"
+   ],
+   "gallery_files": [
+    "blaue-berge.jpg",
+    "blaue-berge-2.jpg",
+    "blaue-berge-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "bachlauf",
+   "name": "Bachlauf",
+   "media": "f104f4_d3cfd95f54f7412aa7c47239c3db0a9f~mv2.jpg",
+   "cats": [
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 50x60cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_d3cfd95f54f7412aa7c47239c3db0a9f~mv2.jpg",
+    "f104f4_50dfc145175c40028972cbb2e498d345~mv2.jpg",
+    "f104f4_198b0030cfb641fba7cbe827d4329d0b~mv2.jpg"
+   ],
+   "gallery_files": [
+    "bachlauf.jpg",
+    "bachlauf-2.jpg",
+    "bachlauf-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "kueste",
+   "name": "Küste",
+   "media": "f104f4_97319db6992948ea86d9deb882375c36~mv2.jpg",
+   "cats": [
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_97319db6992948ea86d9deb882375c36~mv2.jpg",
+    "f104f4_9513ff41ed5c42f2add20b4caec1e04e~mv2.jpg",
+    "f104f4_545a19e4053d43dd93b405dc417423c2~mv2.jpg"
+   ],
+   "gallery_files": [
+    "kueste.jpg",
+    "kueste-2.jpg",
+    "kueste-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "das-riff",
+   "name": "Das Riff",
+   "media": "f104f4_6983f878ad6f41c39c3c92e840df7421~mv2.jpg",
+   "cats": [
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 70x60cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_6983f878ad6f41c39c3c92e840df7421~mv2.jpg",
+    "f104f4_e696641b939d437e9f7cb4d7a0e0a102~mv2.jpg",
+    "f104f4_a4e80b59505648c49420a9a12cd44ba4~mv2.jpg"
+   ],
+   "gallery_files": [
+    "das-riff.jpg",
+    "das-riff-2.jpg",
+    "das-riff-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "blaues-dorf",
+   "name": "Blaues Dorf",
+   "media": "f104f4_3154b367d48241d09cbe6bd9c7bfa2b6~mv2.jpg",
+   "cats": [
+    "landschaften"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 70x60cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_3154b367d48241d09cbe6bd9c7bfa2b6~mv2.jpg",
+    "f104f4_af67eecd84944ead963cacbba663b94f~mv2.jpg",
+    "f104f4_9570433c1b544ef89d831087641f452a~mv2.jpg",
+    "f104f4_4f1f389ec478454b92150f9a4e98de6e~mv2.jpg",
+    "f104f4_75ebb95354af444f8d9a8c2d4be3b88e~mv2.jpg"
+   ],
+   "gallery_files": [
+    "blaues-dorf.jpg",
+    "blaues-dorf-img2.jpg",
+    "blaues-dorf-img3.jpg",
+    "blaues-dorf-img4.jpg",
+    "blaues-dorf-img5.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "patchwork-blumen",
+   "name": "Patchwork Blumen",
+   "media": "f104f4_6bb72cab2c794e858963d7bdcfd1d506~mv2.jpg",
+   "cats": [
+    "pflanzen-stillleben"
+   ],
+   "medium_size": [
+    "Öl auf Leinwand, 40x40cm"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_6bb72cab2c794e858963d7bdcfd1d506~mv2.jpg",
+    "f104f4_36741f13ce8d4b07ab1a0567fd323b2e~mv2.jpg",
+    "f104f4_0b75e804cc7b46a9834ffc9063228ed2~mv2.jpg"
+   ],
+   "gallery_files": [
+    "patchwork-blumen.jpg",
+    "patchwork-blumen-2.jpg",
+    "patchwork-blumen-3.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "blauer-mann",
+   "name": "Blauer Mann",
+   "media": "f104f4_f2fbe84e02ca4b4d9a580a8385f8e0f7~mv2.jpg",
+   "cats": [
+    "menschen"
+   ],
+   "medium_size": [],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_f2fbe84e02ca4b4d9a580a8385f8e0f7~mv2.jpg",
+    "f104f4_0ca6a4515e1b4376ad93b9a232ad00bf~mv2.jpg"
+   ],
+   "gallery_files": [
+    "blauer-mann.jpg",
+    "blauer-mann-2.jpg"
+   ],
+   "is_new": false
+  },
+  {
+   "slug": "herz",
+   "name": "Herz",
+   "media": "f104f4_56b7005565c343f1a8925e86daae317f~mv2.jpg",
+   "cats": [
+    "aquarell"
+   ],
+   "medium_size": [
+    "Aquarell und Kreide"
+   ],
+   "price": "Preis auf Anfrage",
+   "media_all": [
+    "f104f4_56b7005565c343f1a8925e86daae317f~mv2.jpg",
+    "f104f4_e13fa2183e424da2953b772a50f4ff2b~mv2.jpg",
+    "f104f4_03ff2a61de1c4a40964cac23e6b0c40e~mv2.jpg"
+   ],
+   "gallery_files": [
+    "herz.jpg",
+    "herz-2.jpg",
+    "herz-3.jpg"
+   ],
+   "is_new": false
+  }
+ ]
+}
