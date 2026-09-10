@@ -243,7 +243,7 @@ home_items = [a for a in artworks if "home" in a["cats"]]
 hero_lead = f'''    <section class="home-band home-band--muted">
       <div class="home-band-inner hero">
         <div class="hero-text">
-          <h1>Malerei von {esc(site["artist"].split("-")[0])} aus {esc(site["city"])}</h1>
+          <h1>Malerei von {esc(site["artist"].split("-")[0])}</h1>
           <p>Bienvenue! Schön, dass Sie den Weg hierher gefunden haben. Dies ist eine Auswahl von meinen Bildern, die ich zum Verkauf oder auch für Ausstellungen zur Verfügung stelle. Alle Bilder sind Unikate und können auch gerne vor Ort bei mir in Köln besichtigt werden.</p>
           <a class="btn" href="oel-acryl.html">Jetzt entdecken</a>
         </div>
@@ -282,7 +282,7 @@ open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(
 en_hero_lead = f'''    <section class="home-band home-band--muted">
       <div class="home-band-inner hero">
         <div class="hero-text">
-          <h1>Paintings by {esc(site["artist"].split("-")[0])} from Cologne</h1>
+          <h1>Paintings by {esc(site["artist"].split("-")[0])}</h1>
           <p>Bienvenue! Welcome, and thank you for finding your way here. This is a selection of my paintings, which I offer for sale or for exhibitions. All works are one-of-a-kind originals and can also be viewed in person at my studio in Cologne.</p>
           <a class="btn" href="oel-acryl.html">Discover now</a>
         </div>
