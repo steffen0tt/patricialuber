@@ -16,6 +16,25 @@ categories = data["categories"]
 artworks = data["artworks"]
 cat_by_slug = {c["slug"]: c for c in categories}
 
+def person_ld_json():
+    """JSON-LD (schema.org Person) fuer Startseite und Ueber-mich-Seite - staerkt die Namens-/Markensuche."""
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": site.get("full_name", site["artist"]),
+        "alternateName": "Patricia Luber",
+        "jobTitle": "Malerin",
+        "description": "Malerin aus Köln – Öl- und Acrylbilder sowie Aquarelle.",
+        "url": site.get("url", ""),
+        "image": f"{site.get('url', '')}assets/images/portrait.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": site.get("city", "Köln"),
+            "addressCountry": "DE",
+        },
+    }
+    return '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>\n'
+
 def esc(s):
     return html.escape(s, quote=True)
 
@@ -169,7 +188,7 @@ home_items = [a for a in artworks if "home" in a["cats"]]
 hero_lead = f'''    <section class="home-band home-band--muted">
       <div class="home-band-inner hero">
         <div class="hero-text">
-          <h1>Malerei von {esc(site["artist"].split("-")[0])}</h1>
+          <h1>Malerei von {esc(site["artist"].split("-")[0])} aus {esc(site["city"])}</h1>
           <p>Bienvenue! Schön, dass Sie den Weg hierher gefunden haben. Dies ist eine Auswahl von meinen Bildern, die ich zum Verkauf oder auch für Ausstellungen zur Verfügung stelle. Alle Bilder sind Unikate und können auch gerne vor Ort bei mir in Köln besichtigt werden.</p>
           <a class="btn" href="oel-acryl.html">Jetzt entdecken</a>
         </div>
@@ -199,9 +218,10 @@ home_gallery = product_slider(home_items, hero_lead) + '''      </div>
     </section>
 '''
 open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(
-    page_shell("Künstlerin | Patricia Luber | Köln | Ölmalerei | Aquarelle",
+    page_shell("Patricia Luber – Malerei aus Köln | Öl, Acryl & Aquarell",
                "Malerei von Patricia Luber aus Köln – Öl- und Acrylbilder sowie Aquarelle, Originale zum Verkauf oder für Ausstellungen.",
-               "index", home_gallery, path="index.html", image="assets/images/hero.jpg")
+               "index", home_gallery, path="index.html", image="assets/images/hero.jpg",
+               extra_head=person_ld_json())
 )
 
 # ---------- oel-acryl.html (overview linking subcategories) ----------
@@ -261,7 +281,8 @@ about_body = '''    <section class="section about-page">
 open(os.path.join(OUT, "ueber-mich.html"), "w", encoding="utf-8").write(
     page_shell("Über mich | Patricia Luber",
                "Patricia Luber-Laporte – Künstlerin in Köln. Über meinen Weg zur Malerei.",
-               "ueber-mich", about_body, path="ueber-mich.html", image="assets/images/portrait.jpg")
+               "ueber-mich", about_body, path="ueber-mich.html", image="assets/images/portrait.jpg",
+               extra_head=person_ld_json())
 )
 
 # ---------- kontakt.html ----------
