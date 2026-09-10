@@ -323,6 +323,8 @@ h2 { font-size: clamp(1.4rem, 3vw, 1.7rem); }
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding: 0.2rem 0.2rem 1rem;
+  scroll-padding-left: 0.2rem;
+  scroll-padding-right: 0.2rem;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--color-ink-light) transparent;
@@ -366,10 +368,38 @@ h2 { font-size: clamp(1.4rem, 3vw, 1.7rem); }
 .slider-prev { left: -14px; }
 .slider-next { right: -14px; }
 
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-border);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.slider-dot:hover { background: var(--color-ink-light); }
+.slider-dot.active {
+  background: var(--color-ink-light);
+  transform: scale(1.3);
+}
+
 @media (max-width: 720px) {
   .slider-arrow { display: none; }
   .slider-wrap { margin-left: -1.5rem; margin-right: -1.5rem; }
-  .slider { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .slider {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    scroll-padding-left: 1.5rem;
+    scroll-padding-right: 1.5rem;
+  }
 }
 
 /* Category overview cards */
@@ -499,7 +529,7 @@ h2 { font-size: clamp(1.4rem, 3vw, 1.7rem); }
 .portrait { border-radius: var(--radius-img); }
 .about-text p { margin: 0 0 1em; }
 
-.about-teaser h2 { font-family: var(--font-display); font-weight: 700; }
+.about-teaser h2 { font-weight: 700; }
 .about-teaser p { max-width: 700px; margin: 0 0 1.5rem; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 1rem; }
 
@@ -617,6 +647,7 @@ h2 { font-size: clamp(1.4rem, 3vw, 1.7rem); }
   .site-header,
   .site-footer,
   .slider-arrow,
+  .slider-dots,
   .gallery-toolbar,
   .breadcrumb,
   .back-link,

@@ -58,6 +58,63 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Slider-Punkte: zeigen, wie viele "Seiten" es gibt und wie weit man klicken kann
+  var sliderDots = document.getElementById('sliderDots');
+  if (slider && sliderDots) {
+    var dotButtons = [];
+    var updateActiveDot = function () {
+      if (!dotButtons.length) { return; }
+      var pageWidth = slider.clientWidth || 1;
+      var active = Math.round(slider.scrollLeft / pageWidth);
+      active = Math.max(0, Math.min(dotButtons.length - 1, active));
+      dotButtons.forEach(function (dot, i) {
+        dot.classList.toggle('active', i === active);
+      });
+    };
+    var buildDots = function () {
+      var pageWidth = slider.clientWidth;
+      var pages = pageWidth > 0 ? Math.round(slider.scrollWidth / pageWidth) : 1;
+      pages = Math.max(1, pages);
+      sliderDots.innerHTML = '';
+      dotButtons = [];
+      if (pages <= 1) {
+        sliderDots.hidden = true;
+        return;
+      }
+      sliderDots.hidden = false;
+      for (var i = 0; i < pages; i++) {
+        var dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'slider-dot';
+        dot.setAttribute('aria-label', 'Zu Bildern ' + (i + 1) + ' von ' + pages + ' springen');
+        (function (index) {
+          dot.addEventListener('click', function () {
+            slider.scrollTo({ left: index * slider.clientWidth, behavior: 'smooth' });
+          });
+        })(i);
+        sliderDots.appendChild(dot);
+        dotButtons.push(dot);
+      }
+      updateActiveDot();
+    };
+    var scrollTick = false;
+    slider.addEventListener('scroll', function () {
+      if (scrollTick) { return; }
+      scrollTick = true;
+      window.requestAnimationFrame(function () {
+        updateActiveDot();
+        scrollTick = false;
+      });
+    });
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(buildDots, 150);
+    });
+    window.addEventListener('load', buildDots);
+    buildDots();
+  }
+
   // Contact form -> mailto
   var form = document.getElementById('contactForm');
   if (form) {
@@ -116,11 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
     sortSelect.addEventListener('change', function () {
       var cards = Array.prototype.slice.call(artGrid.children);
       var mode = sortSelect.value;
-      if (mode === 'price-asc') {
-        cards.sort(function (a, b) { return (parseFloat(a.dataset.price) - parseFloat(b.dataset.price)) || (a.dataset.order - b.dataset.order); });
-      } else if (mode === 'price-desc') {
-        cards.sort(function (a, b) { return (parseFloat(b.dataset.price) - parseFloat(a.dataset.price)) || (a.dataset.order - b.dataset.order); });
-      } else if (mode === 'name-asc') {
+      if (mode === 'name-asc') {
         cards.sort(function (a, b) { return a.dataset.name.localeCompare(b.dataset.name, 'de'); });
       } else if (mode === 'name-desc') {
         cards.sort(function (a, b) { return b.dataset.name.localeCompare(a.dataset.name, 'de'); });

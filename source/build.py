@@ -126,7 +126,7 @@ def price_sort_value(a):
 def gallery_grid(items, lead=""):
     cards = []
     for i, a in enumerate(items):
-        ribbon = '<div class="ribbon-neu">Neu</div>' if a.get("is_new") else ''
+        ribbon = ''  # "Neu"-Badge deaktiviert (Kundenwunsch)
         cards.append(f'''        <a class="art-card" href="werke/{a["slug"]}.html" data-name="{esc(a["name"])}" data-price="{price_sort_value(a)}" data-order="{i}">
           {ribbon}
           <img src="assets/images/{thumb_filename(img_filename(a["slug"]))}" alt="{esc(a["name"])}" loading="lazy">
@@ -135,8 +135,6 @@ def gallery_grid(items, lead=""):
     toolbar = '''      <div class="gallery-toolbar">
         <select id="sortSelect" class="sort-select" aria-label="Sortieren nach">
           <option value="">Sortieren nach</option>
-          <option value="price-asc">Preis (niedrig bis hoch)</option>
-          <option value="price-desc">Preis (hoch bis niedrig)</option>
           <option value="name-asc">Name (A-Z)</option>
           <option value="name-desc">Name (Z-A)</option>
         </select>
@@ -163,6 +161,7 @@ def product_slider(items, lead=""):
         </div>
         <button class="slider-arrow slider-next" type="button" aria-label="Nächstes Produkt">&#8250;</button>
       </div>
+      <div class="slider-dots" id="sliderDots"></div>
 '''
 
 # ---------- index.html ----------
@@ -170,9 +169,8 @@ home_items = [a for a in artworks if "home" in a["cats"]]
 hero_lead = f'''    <section class="home-band home-band--muted">
       <div class="home-band-inner hero">
         <div class="hero-text">
-          <p class="eyebrow">Bienvenue</p>
           <h1>Malerei von {esc(site["artist"].split("-")[0])}</h1>
-          <p>Schön, dass Sie den Weg hierher gefunden haben. Dies ist eine Auswahl von meinen Bildern, die ich zum Verkauf oder auch für Ausstellungen zur Verfügung stelle. Alle Bilder sind Unikate und können auch gerne vor Ort bei mir in Köln besichtigt werden.</p>
+          <p>Bienvenue! Schön, dass Sie den Weg hierher gefunden haben. Dies ist eine Auswahl von meinen Bildern, die ich zum Verkauf oder auch für Ausstellungen zur Verfügung stelle. Alle Bilder sind Unikate und können auch gerne vor Ort bei mir in Köln besichtigt werden.</p>
           <a class="btn" href="oel-acryl.html">Jetzt entdecken</a>
         </div>
         <div class="hero-image">
