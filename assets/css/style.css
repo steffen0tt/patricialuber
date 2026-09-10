@@ -184,6 +184,21 @@ h2 { font-size: clamp(1.4rem, 3vw, 1.7rem); }
 }
 .site-nav a:hover,
 .site-nav a.active { border-bottom-color: var(--color-ink-light); }
+.site-nav li.lang-switch a {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 0.25em 0.85em;
+  border-bottom: none;
+}
+.site-nav li.lang-switch a:hover {
+  background: var(--color-ink-light);
+  color: #fff;
+  border-color: var(--color-ink-light);
+}
 .has-sub { position: relative; }
 .sub-toggle {
   display: none;

@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Contact form -> mailto
   var form = document.getElementById('contactForm');
   if (form) {
+    var pageLang = (document.documentElement.lang || 'de').toLowerCase().indexOf('en') === 0 ? 'en' : 'de';
     // Betreff aus URL-Parameter vorbelegen (z.B. von einer Werk-Seite verlinkt)
     var params = new URLSearchParams(window.location.search);
     var prefillSubject = params.get('subject');
@@ -126,7 +127,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (prefillSubject && subjectField) {
       subjectField.value = prefillSubject;
       if (messageField && !messageField.value) {
-        messageField.value = 'Hallo Frau Luber,\n\nich habe folgende Frage: ';
+        messageField.value = pageLang === 'en'
+          ? 'Hello Ms. Luber,\n\nI have the following question: '
+          : 'Hallo Frau Luber,\n\nich habe folgende Frage: ';
       }
     }
 
@@ -134,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       var name = document.getElementById('name').value.trim();
       var email = document.getElementById('email').value.trim();
-      var subject = document.getElementById('subject').value.trim() || 'Kontaktanfrage über die Website';
+      var subject = document.getElementById('subject').value.trim() || (pageLang === 'en' ? 'Contact request via website' : 'Kontaktanfrage über die Website');
       var message = document.getElementById('message').value.trim();
 
       var body = 'Name: ' + name + '\n' + 'Email: ' + email + '\n\n' + message;

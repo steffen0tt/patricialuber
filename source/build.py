@@ -9,6 +9,7 @@ os.makedirs(os.path.join(OUT, "assets", "images"), exist_ok=True)
 os.makedirs(os.path.join(OUT, "assets", "css"), exist_ok=True)
 os.makedirs(os.path.join(OUT, "assets", "js"), exist_ok=True)
 os.makedirs(os.path.join(OUT, "werke"), exist_ok=True)
+os.makedirs(os.path.join(OUT, "en"), exist_ok=True)
 
 data = json.load(open(os.path.join(BASE, "data.json"), encoding="utf-8"))
 site = data["site"]
@@ -47,74 +48,125 @@ def thumb_filename(filename):
 def cls_active(active, key):
     return ' class="active"' if active == key else ''
 
-def nav_html(active="", prefix=""):
+NAV_LABELS = {
+    "de": {
+        "home": "Start", "oel_acryl": "Öl &amp; Acryl", "aquarell": "Aquarell",
+        "ueber_mich": "Über mich", "kontakt": "Kontakt",
+        "menu": "Menü öffnen", "sub_toggle": "Unterkategorien anzeigen",
+    },
+    "en": {
+        "home": "Home", "oel_acryl": "Oil &amp; Acrylic", "aquarell": "Watercolor",
+        "ueber_mich": "About Me", "kontakt": "Contact",
+        "menu": "Open menu", "sub_toggle": "Show subcategories",
+    },
+}
+
+FOOTER_LABELS = {
+    "de": {"impressum": "Impressum", "datenschutz": "Datenschutz"},
+    "en": {"impressum": "Imprint (German)", "datenschutz": "Privacy Policy (German)"},
+}
+
+# Seiten, die es auch auf Englisch gibt (Slug ist in beiden Sprachen identisch, nur unter /en/ gespiegelt)
+TRANSLATED_PAGES = {"index", "oel-acryl", "abstrakt", "landschaften", "menschen", "pflanzen-stillleben", "tiermotive", "aquarell", "ueber-mich", "kontakt"}
+
+def lang_switch(active, prefix, lang):
+    """Ziel-URL + Label fuer den DE/EN-Umschalter in der Navigation."""
+    other = "en" if lang == "de" else "de"
+    if active in TRANSLATED_PAGES:
+        target = f"{active}.html"
+        href = f"{prefix}en/{target}" if lang == "de" else f"{prefix}{target}"
+    else:
+        href = f"{prefix}en/index.html" if lang == "de" else f"{prefix}index.html"
+    return href, other.upper()
+
+def nav_html(active="", prefix="", lang="de", nav_prefix=None):
+    if nav_prefix is None:
+        nav_prefix = prefix
+    L = NAV_LABELS[lang]
     sub_items = []
     for c in categories:
         if c["parent"] == "oel-acryl":
+            title = c.get("title_en", c["title"]) if lang == "en" else c["title"]
             sub_items.append('          <li><a href="{p}{s}.html"{cls}>{t}</a></li>'.format(
-                p=prefix, s=c["slug"], cls=cls_active(active, c["slug"]), t=esc(c["title"])))
+                p=nav_prefix, s=c["slug"], cls=cls_active(active, c["slug"]), t=esc(title)))
     sub = "\n".join(sub_items)
+    switch_href, switch_label = lang_switch(active, prefix, lang)
+    switch_hreflang = "en" if lang == "de" else "de"
     return '''  <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="{p}index.html">Patricia Luber</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <a class="brand" href="{np}index.html">Patricia Luber</a>
+      <button class="nav-toggle" id="navToggle" aria-label="{menu}" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <nav class="site-nav" id="siteNav">
         <ul>
-          <li><a href="{p}index.html"{idx}>Start</a></li>
+          <li><a href="{np}index.html"{idx}>{home}</a></li>
           <li class="has-sub">
-            <a href="{p}oel-acryl.html"{oa}>Öl &amp; Acryl</a>
-            <button type="button" class="sub-toggle" aria-expanded="false" aria-label="Unterkategorien anzeigen"><span class="rot" aria-hidden="true">&#9662;</span></button>
+            <a href="{np}oel-acryl.html"{oa}>{oel_acryl}</a>
+            <button type="button" class="sub-toggle" aria-expanded="false" aria-label="{sub_toggle}"><span class="rot" aria-hidden="true">&#9662;</span></button>
             <ul class="sub-nav">
 {sub}
             </ul>
           </li>
-          <li><a href="{p}aquarell.html"{aq}>Aquarell</a></li>
-          <li><a href="{p}ueber-mich.html"{um}>Über mich</a></li>
-          <li><a href="{p}kontakt.html"{kt}>Kontakt</a></li>
+          <li><a href="{np}aquarell.html"{aq}>{aquarell}</a></li>
+          <li><a href="{np}ueber-mich.html"{um}>{ueber_mich}</a></li>
+          <li><a href="{np}kontakt.html"{kt}>{kontakt}</a></li>
+          <li class="lang-switch"><a href="{sh}" hreflang="{shl}">{sl}</a></li>
         </ul>
       </nav>
     </div>
   </header>
 '''.format(
-        p=prefix,
+        np=nav_prefix,
         idx=cls_active(active, "index"),
         oa=cls_active(active, "oel-acryl"),
         sub=sub,
         aq=cls_active(active, "aquarell"),
         um=cls_active(active, "ueber-mich"),
         kt=cls_active(active, "kontakt"),
+        home=L["home"], oel_acryl=L["oel_acryl"], aquarell=L["aquarell"],
+        ueber_mich=L["ueber_mich"], kontakt=L["kontakt"],
+        menu=L["menu"], sub_toggle=L["sub_toggle"],
+        sh=switch_href, shl=switch_hreflang, sl=switch_label,
     )
 
-def footer_html(prefix=""):
+def footer_html(prefix="", lang="de"):
+    L = FOOTER_LABELS[lang]
     return f'''  <footer class="site-footer">
     <div class="footer-inner">
-      <p class="footer-legal"><a href="{prefix}impressum.html">Impressum</a> &middot; <a href="{prefix}datenschutz.html">Datenschutz</a></p>
+      <p class="footer-legal"><a href="{prefix}impressum.html">{L["impressum"]}</a> &middot; <a href="{prefix}datenschutz.html">{L["datenschutz"]}</a></p>
     </div>
   </footer>
 '''
 
-def page_shell(title, description, active, body, prefix="", extra_head="", path="", image="assets/images/hero.jpg"):
+def page_shell(title, description, active, body, prefix="", extra_head="", path="", image="assets/images/hero.jpg", lang="de", nav_prefix=None, alt_langs=None):
     site_url = site.get("url", "")
     canonical = f"{site_url}{path}" if site_url else ""
     og_image = f"{site_url}{image}" if site_url else f"{prefix}{image}"
     canonical_tag = f'<link rel="canonical" href="{canonical}">\n' if canonical else ""
     og_url_tag = f'<meta property="og:url" content="{canonical}">\n' if canonical else ""
+    og_locale = "en_US" if lang == "en" else "de_DE"
+    hreflang_tags = ""
+    if alt_langs and site_url:
+        for hl, p in alt_langs.items():
+            hreflang_tags += f'<link rel="alternate" hreflang="{hl}" href="{esc(site_url + p)}">\n'
+        default_path = alt_langs.get("de", path)
+        hreflang_tags += f'<link rel="alternate" hreflang="x-default" href="{esc(site_url + default_path)}">\n'
+    skip_text = "Skip to content" if lang == "en" else "Zum Inhalt springen"
     return f'''<!DOCTYPE html>
-<html lang="de">
+<html lang="{lang}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
-{canonical_tag}<link rel="icon" href="{prefix}assets/icons/favicon.ico" sizes="any">
+{canonical_tag}{hreflang_tags}<link rel="icon" href="{prefix}assets/icons/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="{prefix}assets/icons/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="{prefix}assets/icons/favicon-32x32.png">
 <link rel="apple-touch-icon" href="{prefix}assets/icons/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{esc(site['artist'])}">
-<meta property="og:locale" content="de_DE">
+<meta property="og:locale" content="{og_locale}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 {og_url_tag}<meta property="og:image" content="{og_image}">
@@ -125,12 +177,12 @@ def page_shell(title, description, active, body, prefix="", extra_head="", path=
 <link rel="stylesheet" href="{prefix}assets/css/style.css">
 {extra_head}</head>
 <body>
-<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
-{nav_html(active, prefix)}
+<a class="skip-link" href="#main-content">{skip_text}</a>
+{nav_html(active, prefix, lang=lang, nav_prefix=nav_prefix)}
   <main id="main-content">
 {body}
   </main>
-{footer_html(prefix)}
+{footer_html(prefix, lang=lang)}
   <script src="{prefix}assets/js/main.js"></script>
 </body>
 </html>
@@ -142,18 +194,19 @@ def price_sort_value(a):
         return 1
     return 0
 
-def gallery_grid(items, lead=""):
+def gallery_grid(items, lead="", prefix="", lang="de"):
     cards = []
     for i, a in enumerate(items):
         ribbon = ''  # "Neu"-Badge deaktiviert (Kundenwunsch)
-        cards.append(f'''        <a class="art-card" href="werke/{a["slug"]}.html" data-name="{esc(a["name"])}" data-price="{price_sort_value(a)}" data-order="{i}">
+        cards.append(f'''        <a class="art-card" href="{prefix}werke/{a["slug"]}.html" data-name="{esc(a["name"])}" data-price="{price_sort_value(a)}" data-order="{i}">
           {ribbon}
-          <img src="assets/images/{thumb_filename(img_filename(a["slug"]))}" alt="{esc(a["name"])}" loading="lazy">
+          <img src="{prefix}assets/images/{thumb_filename(img_filename(a["slug"]))}" alt="{esc(a["name"])}" loading="lazy">
           <span class="art-card-caption">{esc(a["name"])}</span>
         </a>''')
-    toolbar = '''      <div class="gallery-toolbar">
-        <select id="sortSelect" class="sort-select" aria-label="Sortieren nach">
-          <option value="">Sortieren nach</option>
+    sort_label = "Sort by" if lang == "en" else "Sortieren nach"
+    toolbar = f'''      <div class="gallery-toolbar">
+        <select id="sortSelect" class="sort-select" aria-label="{sort_label}">
+          <option value="">{sort_label}</option>
           <option value="name-asc">Name (A-Z)</option>
           <option value="name-desc">Name (Z-A)</option>
         </select>
@@ -165,20 +218,22 @@ def gallery_grid(items, lead=""):
       </div>
 '''
 
-def product_slider(items, lead=""):
+def product_slider(items, lead="", prefix="", lang="de"):
     cards = []
     for a in items:
-        cards.append(f'''          <a class="slider-card" href="werke/{a["slug"]}.html">
-            <img src="assets/images/{thumb_filename(img_filename(a["slug"]))}" alt="{esc(a["name"])}" loading="lazy">
+        cards.append(f'''          <a class="slider-card" href="{prefix}werke/{a["slug"]}.html">
+            <img src="{prefix}assets/images/{thumb_filename(img_filename(a["slug"]))}" alt="{esc(a["name"])}" loading="lazy">
             <span class="art-card-caption">{esc(a["name"])}</span>
           </a>''')
+    prev_label = "Previous painting" if lang == "en" else "Vorheriges Produkt"
+    next_label = "Next painting" if lang == "en" else "Nächstes Produkt"
     return f'''{lead}
       <div class="slider-wrap">
-        <button class="slider-arrow slider-prev" type="button" aria-label="Vorheriges Produkt">&#8249;</button>
+        <button class="slider-arrow slider-prev" type="button" aria-label="{prev_label}">&#8249;</button>
         <div class="slider" id="productSlider">
 {chr(10).join(cards)}
         </div>
-        <button class="slider-arrow slider-next" type="button" aria-label="Nächstes Produkt">&#8250;</button>
+        <button class="slider-arrow slider-next" type="button" aria-label="{next_label}">&#8250;</button>
       </div>
       <div class="slider-dots" id="sliderDots"></div>
 '''
@@ -217,11 +272,54 @@ home_gallery = product_slider(home_items, hero_lead) + '''      </div>
       </div>
     </section>
 '''
+INDEX_ALT_LANGS = {"de": "index.html", "en": "en/index.html"}
+
 open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(
     page_shell("Patricia Luber – Malerei aus Köln | Öl, Acryl & Aquarell",
                "Malerei von Patricia Luber aus Köln – Öl- und Acrylbilder sowie Aquarelle, Originale zum Verkauf oder für Ausstellungen.",
                "index", home_gallery, path="index.html", image="assets/images/hero.jpg",
-               extra_head=person_ld_json())
+               extra_head=person_ld_json(), alt_langs=INDEX_ALT_LANGS)
+)
+
+# ---------- en/index.html (englische Startseite) ----------
+en_hero_lead = f'''    <section class="home-band home-band--muted">
+      <div class="home-band-inner hero">
+        <div class="hero-text">
+          <h1>Paintings by {esc(site["artist"].split("-")[0])} from Cologne</h1>
+          <p>Bienvenue! Welcome, and thank you for finding your way here. This is a selection of my paintings, which I offer for sale or for exhibitions. All works are one-of-a-kind originals and can also be viewed in person at my studio in Cologne.</p>
+          <a class="btn" href="oel-acryl.html">Discover now</a>
+        </div>
+        <div class="hero-image">
+          <img src="../assets/images/hero.jpg" alt="Painting by Patricia Luber" loading="eager">
+        </div>
+      </div>
+    </section>
+    <section class="home-band home-band--light">
+      <div class="home-band-inner">
+        <h2>All Paintings</h2>
+'''
+en_home_gallery = product_slider(home_items, en_hero_lead, prefix="../", lang="en") + '''      </div>
+    </section>
+    <section class="home-band home-band--muted">
+      <div class="home-band-inner about-teaser">
+        <h2>About Me</h2>
+        <p>Born in Germany, raised in France, I returned to Germany after completing my studies in languages and business administration – first to Munich, then to Cologne.</p>
+        <p>Art and painting have been part of my life since my youth. I was initially drawn especially to silk painting and watercolors. Later I turned to drawing with pencil and charcoal, and to oil painting, and eventually to acrylics.</p>
+        <p>Here in Cologne, I regularly attend painting courses, among others with Bettina Mauel, Imke Pitro-Riedel, Kaikaoss, and Lucian.</p>
+        <p>I recently completed a three-year intensive program at the independent art academy arte fact in Bonn.</p>
+        <p>My most frequently used techniques at the moment are watercolor and oil. My favorite subjects are landscapes, flowers, still lifes, and people. I draw inspiration from trips to my second home country, France, as well as travels, particularly in Asia. I also enjoy painting pictures for children.</p>
+        <div class="btn-row">
+          <a class="btn" href="kontakt.html">Get in touch</a>
+        </div>
+      </div>
+    </section>
+'''
+open(os.path.join(OUT, "en", "index.html"), "w", encoding="utf-8").write(
+    page_shell("Patricia Luber – Paintings from Cologne | Oil, Acrylic & Watercolor",
+               "Paintings by Patricia Luber from Cologne, Germany – original oil and acrylic works as well as watercolors, available for sale or exhibition.",
+               "index", en_home_gallery, prefix="../", nav_prefix="", path="en/index.html",
+               image="assets/images/hero.jpg", lang="en", extra_head=person_ld_json(),
+               alt_langs=INDEX_ALT_LANGS)
 )
 
 # ---------- oel-acryl.html (overview linking subcategories) ----------
@@ -242,10 +340,38 @@ body = f'''    <section class="section">
       </div>
     </section>
 '''
+OEL_ACRYL_ALT_LANGS = {"de": "oel-acryl.html", "en": "en/oel-acryl.html"}
+
 open(os.path.join(OUT, "oel-acryl.html"), "w", encoding="utf-8").write(
     page_shell("Öl & Acryl | Patricia Luber",
                "Öl- und Acrylbilder von Patricia Luber, gegliedert nach Abstrakt, Landschaften, Menschen, Stillleben und Tiermotiven.",
-               "oel-acryl", body, path="oel-acryl.html", image="assets/images/hero.jpg")
+               "oel-acryl", body, path="oel-acryl.html", image="assets/images/hero.jpg",
+               alt_langs=OEL_ACRYL_ALT_LANGS)
+)
+
+# ---------- en/oel-acryl.html ----------
+en_cards = []
+for c in sub_cats:
+    rep = next((a for a in artworks if c["slug"] in a["cats"]), None)
+    img = img_filename(rep["slug"]) if rep else "hero.jpg"
+    title_en = c.get("title_en", c["title"])
+    en_cards.append(f'''        <a class="cat-card" href="{c["slug"]}.html">
+          <img src="../assets/images/{img}" alt="{esc(title_en)}" loading="lazy">
+          <span>{esc(title_en)}</span>
+        </a>''')
+en_body = f'''    <section class="section">
+      <h1>Oil &amp; Acrylic</h1>
+      <p>An overview of my oil and acrylic paintings by theme.</p>
+      <div class="cat-grid">
+{chr(10).join(en_cards)}
+      </div>
+    </section>
+'''
+open(os.path.join(OUT, "en", "oel-acryl.html"), "w", encoding="utf-8").write(
+    page_shell("Oil & Acrylic | Patricia Luber",
+               "Oil and acrylic paintings by Patricia Luber, organized by Abstract, Landscapes, People, Still Life and Animal Motifs.",
+               "oel-acryl", en_body, prefix="../", nav_prefix="", path="en/oel-acryl.html",
+               image="assets/images/hero.jpg", lang="en", alt_langs=OEL_ACRYL_ALT_LANGS)
 )
 
 # ---------- category pages ----------
@@ -255,10 +381,23 @@ for c in all_gallery_cats:
     lead = f"    <section class=\"section\">\n      <h1>{esc(c['title'])}</h1>\n"
     gallery = gallery_grid(items, lead) + "    </section>\n"
     cat_image = f"assets/images/{img_filename(items[0]['slug'])}" if items else "assets/images/hero.jpg"
+    cat_alt_langs = {"de": f"{c['slug']}.html", "en": f"en/{c['slug']}.html"}
     open(os.path.join(OUT, f"{c['slug']}.html"), "w", encoding="utf-8").write(
         page_shell(f"{c['title']} | Patricia Luber",
                    f"{c['title']} – Gemälde von Patricia Luber.",
-                   c["slug"], gallery, path=f"{c['slug']}.html", image=cat_image)
+                   c["slug"], gallery, path=f"{c['slug']}.html", image=cat_image,
+                   alt_langs=cat_alt_langs)
+    )
+
+    # englische Version derselben Kategorie
+    title_en = c.get("title_en", c["title"])
+    en_lead = f"    <section class=\"section\">\n      <h1>{esc(title_en)}</h1>\n"
+    en_gallery = gallery_grid(items, en_lead, prefix="../", lang="en") + "    </section>\n"
+    open(os.path.join(OUT, "en", f"{c['slug']}.html"), "w", encoding="utf-8").write(
+        page_shell(f"{title_en} | Patricia Luber",
+                   f"{title_en} – paintings by Patricia Luber.",
+                   c["slug"], en_gallery, prefix="../", nav_prefix="", path=f"en/{c['slug']}.html",
+                   image=cat_image, lang="en", alt_langs=cat_alt_langs)
     )
 
 # ---------- ueber-mich.html ----------
@@ -278,11 +417,38 @@ about_body = '''    <section class="section about-page">
       </div>
     </section>
 '''
+UEBER_MICH_ALT_LANGS = {"de": "ueber-mich.html", "en": "en/ueber-mich.html"}
+
 open(os.path.join(OUT, "ueber-mich.html"), "w", encoding="utf-8").write(
     page_shell("Über mich | Patricia Luber",
                "Patricia Luber-Laporte – Künstlerin in Köln. Über meinen Weg zur Malerei.",
                "ueber-mich", about_body, path="ueber-mich.html", image="assets/images/portrait.jpg",
-               extra_head=person_ld_json())
+               extra_head=person_ld_json(), alt_langs=UEBER_MICH_ALT_LANGS)
+)
+
+# ---------- en/ueber-mich.html ----------
+en_about_body = '''    <section class="section about-page">
+      <h1>About Me</h1>
+      <div class="about-layout">
+        <img class="portrait" src="../assets/images/portrait.jpg" alt="Patricia Luber-Laporte">
+        <div class="about-text">
+          <p><strong>Patricia Luber-Laporte</strong></p>
+          <p>Born in Germany, raised in France, I returned to Germany after completing my studies in languages and business administration – first to Munich, then to Cologne.</p>
+          <p>Art and painting have been part of my life since my youth. I was initially drawn especially to silk painting and watercolors. Later I turned to drawing with pencil and charcoal, and to oil painting, and eventually to acrylics.</p>
+          <p>Here in Cologne, I regularly attend painting courses, among others with Bettina Mauel, Imke Pitro-Riedel, Kaikaoss, and Lucian.</p>
+          <p>I recently completed a three-year intensive program at the independent art academy arte fact in Bonn.</p>
+          <p>My most frequently used techniques at the moment are watercolor and oil. My favorite subjects are landscapes, flowers, still lifes, and people. I draw inspiration from trips to my second home country, France, as well as travels, particularly in Asia. I also enjoy painting pictures for children.</p>
+          <a class="btn" href="kontakt.html">Get in touch</a>
+        </div>
+      </div>
+    </section>
+'''
+open(os.path.join(OUT, "en", "ueber-mich.html"), "w", encoding="utf-8").write(
+    page_shell("About Me | Patricia Luber",
+               "Patricia Luber-Laporte – artist based in Cologne, Germany. About my path to painting.",
+               "ueber-mich", en_about_body, prefix="../", nav_prefix="", path="en/ueber-mich.html",
+               image="assets/images/portrait.jpg", lang="en", extra_head=person_ld_json(),
+               alt_langs=UEBER_MICH_ALT_LANGS)
 )
 
 # ---------- kontakt.html ----------
@@ -309,10 +475,44 @@ contact_body = f'''    <section class="section contact-page">
       </form>
     </section>
 '''
+KONTAKT_ALT_LANGS = {"de": "kontakt.html", "en": "en/kontakt.html"}
+
 open(os.path.join(OUT, "kontakt.html"), "w", encoding="utf-8").write(
     page_shell("Kontakt | Patricia Luber",
                "Kontaktieren Sie Patricia Luber bei Interesse an ihren Bildern.",
-               "kontakt", contact_body, path="kontakt.html", image="assets/images/hero.jpg")
+               "kontakt", contact_body, path="kontakt.html", image="assets/images/hero.jpg",
+               alt_langs=KONTAKT_ALT_LANGS)
+)
+
+# ---------- en/kontakt.html ----------
+en_contact_body = f'''    <section class="section contact-page">
+      <h1>Contact</h1>
+      <p>If you're interested in my work, or in one of my paintings in particular, feel free to send me a short message. I'll get back to you as soon as possible, and I always enjoy an exchange about painting.</p>
+      <p>Warm regards et à bientôt,<br>Patricia Luber</p>
+      <form id="contactForm" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Send</button>
+        <p class="form-hint">Clicking &ldquo;Send&rdquo; will open your email program with a pre-filled message to {esc(site["artist"])}.</p>
+        <p class="form-status" id="formStatus" role="status" hidden>Your email program should now open with the pre-filled message. If nothing happens, feel free to write directly to <a href="mailto:{esc(site["email"])}">{esc(site["email"])}</a>.</p>
+      </form>
+    </section>
+'''
+open(os.path.join(OUT, "en", "kontakt.html"), "w", encoding="utf-8").write(
+    page_shell("Contact | Patricia Luber",
+               "Get in touch with Patricia Luber if you're interested in her paintings.",
+               "kontakt", en_contact_body, prefix="../", nav_prefix="", path="en/kontakt.html",
+               image="assets/images/hero.jpg", lang="en", alt_langs=KONTAKT_ALT_LANGS)
 )
 
 # ---------- impressum.html ----------
@@ -500,6 +700,9 @@ sitemap_paths = ["index.html", "oel-acryl.html"]
 sitemap_paths += [f"{c['slug']}.html" for c in all_gallery_cats]
 sitemap_paths += ["ueber-mich.html", "kontakt.html", "impressum.html", "datenschutz.html"]
 sitemap_paths += [f"werke/{a['slug']}.html" for a in artworks]
+sitemap_paths += ["en/index.html", "en/oel-acryl.html"]
+sitemap_paths += [f"en/{c['slug']}.html" for c in all_gallery_cats]
+sitemap_paths += ["en/ueber-mich.html", "en/kontakt.html"]
 
 site_url = site.get("url", "")
 if site_url:

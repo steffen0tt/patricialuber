@@ -23,31 +23,37 @@
   {
    "slug": "abstrakt",
    "title": "Abstrakt",
+   "title_en": "Abstract",
    "parent": "oel-acryl"
   },
   {
    "slug": "landschaften",
    "title": "Landschaften",
+   "title_en": "Landscapes",
    "parent": "oel-acryl"
   },
   {
    "slug": "menschen",
    "title": "Menschen",
+   "title_en": "People",
    "parent": "oel-acryl"
   },
   {
    "slug": "pflanzen-stillleben",
    "title": "Früchte, Pflanzen & Stillleben",
+   "title_en": "Fruits, Plants & Still Life",
    "parent": "oel-acryl"
   },
   {
    "slug": "tiermotive",
    "title": "Tiermotive",
+   "title_en": "Animal Motifs",
    "parent": "oel-acryl"
   },
   {
    "slug": "aquarell",
    "title": "Aquarell",
+   "title_en": "Watercolor",
    "parent": null
   }
  ],
