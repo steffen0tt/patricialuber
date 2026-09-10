@@ -103,9 +103,6 @@ def page_shell(title, description, active, body, prefix="", extra_head="", path=
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(description)}">
 <meta name="twitter:image" content="{og_image}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="{prefix}assets/css/style.css">
 {extra_head}</head>
 <body>
@@ -358,7 +355,7 @@ datenschutz_body = f'''    <section class="section legal-page">
       <p>Diese Website selbst setzt keine Cookies und verwendet keine Analyse- oder Trackingdienste (z. B. keine Web-Analyse, kein Social-Media-Plugin).</p>
 
       <h2>4. Schriftarten</h2>
-      <p>Die verwendete Schriftart (Raleway) wird lokal von dieser Website ausgeliefert. Es findet keine Verbindung zu externen Schriftart-Servern (z. B. Google Fonts) statt, sodass beim Betrachten der Seite keine Daten an Dritte zu diesem Zweck übertragen werden.</p>
+      <p>Die verwendeten Schriftarten (Fraunces und Work Sans) werden lokal von dieser Website ausgeliefert. Es findet keine Verbindung zu externen Schriftart-Servern (z. B. Google Fonts) statt, sodass beim Betrachten der Seite keine Daten an Dritte zu diesem Zweck übertragen werden.</p>
 
       <h2>5. Kontaktformular</h2>
       <p>Das Kontaktformular auf der Seite &bdquo;Kontakt&ldquo; übermittelt die eingegebenen Daten nicht an einen Server dieser Website. Beim Absenden öffnet sich stattdessen das auf Ihrem Gerät eingerichtete E-Mail-Programm mit einer vorausgefüllten Nachricht an {email_addr}. Die eingegebenen Daten (Name, E-Mail-Adresse, Nachricht) werden erst durch das tatsächliche Versenden dieser E-Mail über Ihren eigenen E-Mail-Anbieter verarbeitet und übermittelt (Art. 6 Abs. 1 lit. b bzw. f DSGVO – Bearbeitung Ihrer Anfrage). Die so erhaltenen Nachrichten werden ausschließlich zur Bearbeitung Ihrer Anfrage genutzt und nicht an Dritte weitergegeben.</p>
