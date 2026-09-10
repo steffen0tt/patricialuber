@@ -263,11 +263,8 @@ home_gallery = product_slider(home_items, hero_lead) + '''      </div>
         <h2>Über mich</h2>
         <p>Geboren in Deutschland, aufgewachsen in Frankreich, nach Abschluss meines Studiums der Sprachen und der Betriebswirtschaft zurück in Deutschland, zuerst in München, dann in Köln.</p>
         <p>Kunst und Malerei begleiten mich seit meiner Jugend. Anfänglich interessierte mich insbesondere die Seiden- und Aquarellmalerei. Später wandte ich mich dem Zeichnen mit Bleistift und Kohle und der Ölmalerei zu, später dem Acryl.</p>
-        <p>Hier in Köln besuche ich regelmäßig Malkurse, unter anderem bei Bettina Mauel, Imke Pitro-Riedel, Kaikaoss, Lucian.</p>
-        <p>Zuletzt habe ich ein 3 jähriges Intensivstudium an der freien Kunstakademie arte fact Bonn absolviert.</p>
-        <p>Meine derzeit am häufigsten angewandten Techniken sind Aquarell und Öl. Meine bevorzugte Motive sind Landschaften, Blumen, Stillleben und Menschen. Inspirieren lasse ich mich auf Fahrten in mein zweites Heimatland Frankreich, aber auch auf Reisen insbesondere in Asien. Gerne male ich auch Bilder für Kinder.</p>
         <div class="btn-row">
-          <a class="btn" href="kontakt.html">Jetzt kontaktieren</a>
+          <a class="btn" href="ueber-mich.html">Mehr erfahren</a>
         </div>
       </div>
     </section>
@@ -305,11 +302,8 @@ en_home_gallery = product_slider(home_items, en_hero_lead, prefix="../", lang="e
         <h2>About Me</h2>
         <p>Born in Germany, raised in France, I returned to Germany after completing my studies in languages and business administration – first to Munich, then to Cologne.</p>
         <p>Art and painting have been part of my life since my youth. I was initially drawn especially to silk painting and watercolors. Later I turned to drawing with pencil and charcoal, and to oil painting, and eventually to acrylics.</p>
-        <p>Here in Cologne, I regularly attend painting courses, among others with Bettina Mauel, Imke Pitro-Riedel, Kaikaoss, and Lucian.</p>
-        <p>I recently completed a three-year intensive program at the independent art academy arte fact in Bonn.</p>
-        <p>My most frequently used techniques at the moment are watercolor and oil. My favorite subjects are landscapes, flowers, still lifes, and people. I draw inspiration from trips to my second home country, France, as well as travels, particularly in Asia. I also enjoy painting pictures for children.</p>
         <div class="btn-row">
-          <a class="btn" href="kontakt.html">Get in touch</a>
+          <a class="btn" href="ueber-mich.html">Learn more</a>
         </div>
       </div>
     </section>
@@ -322,54 +316,35 @@ open(os.path.join(OUT, "en", "index.html"), "w", encoding="utf-8").write(
                alt_langs=INDEX_ALT_LANGS)
 )
 
-# ---------- oel-acryl.html (overview linking subcategories) ----------
+# ---------- oel-acryl.html (alle Werke aller Öl & Acryl-Unterkategorien direkt) ----------
 sub_cats = [c for c in categories if c["parent"] == "oel-acryl"]
-cards = []
-for c in sub_cats:
-    rep = next((a for a in artworks if c["slug"] in a["cats"]), None)
-    img = img_filename(rep["slug"]) if rep else "hero.jpg"
-    cards.append(f'''        <a class="cat-card" href="{c["slug"]}.html">
-          <img src="assets/images/{img}" alt="{esc(c["title"])}" loading="lazy">
-          <span>{esc(c["title"])}</span>
-        </a>''')
-body = f'''    <section class="section">
-      <h1>Öl &amp; Acryl</h1>
-      <p>Eine Übersicht meiner Öl- und Acrylbilder nach Themen.</p>
-      <div class="cat-grid">
-{chr(10).join(cards)}
-      </div>
-    </section>
-'''
+sub_cat_slugs = {c["slug"] for c in sub_cats}
+oel_acryl_items = []
+_seen_slugs = set()
+for a in artworks:
+    if a["slug"] not in _seen_slugs and any(cat in sub_cat_slugs for cat in a["cats"]):
+        oel_acryl_items.append(a)
+        _seen_slugs.add(a["slug"])
+
+lead = "    <section class=\"section\">\n      <h1>Öl &amp; Acryl</h1>\n"
+body = gallery_grid(oel_acryl_items, lead) + "    </section>\n"
+
 OEL_ACRYL_ALT_LANGS = {"de": "oel-acryl.html", "en": "en/oel-acryl.html"}
 
 open(os.path.join(OUT, "oel-acryl.html"), "w", encoding="utf-8").write(
     page_shell("Öl & Acryl | Patricia Luber",
-               "Öl- und Acrylbilder von Patricia Luber, gegliedert nach Abstrakt, Landschaften, Menschen, Stillleben und Tiermotiven.",
+               "Öl- und Acrylbilder von Patricia Luber: Abstrakt, Landschaften, Menschen, Stillleben und Tiermotive – alle Werke auf einen Blick.",
                "oel-acryl", body, path="oel-acryl.html", image="assets/images/hero.jpg",
                alt_langs=OEL_ACRYL_ALT_LANGS)
 )
 
 # ---------- en/oel-acryl.html ----------
-en_cards = []
-for c in sub_cats:
-    rep = next((a for a in artworks if c["slug"] in a["cats"]), None)
-    img = img_filename(rep["slug"]) if rep else "hero.jpg"
-    title_en = c.get("title_en", c["title"])
-    en_cards.append(f'''        <a class="cat-card" href="{c["slug"]}.html">
-          <img src="../assets/images/{img}" alt="{esc(title_en)}" loading="lazy">
-          <span>{esc(title_en)}</span>
-        </a>''')
-en_body = f'''    <section class="section">
-      <h1>Oil &amp; Acrylic</h1>
-      <p>An overview of my oil and acrylic paintings by theme.</p>
-      <div class="cat-grid">
-{chr(10).join(en_cards)}
-      </div>
-    </section>
-'''
+en_lead = "    <section class=\"section\">\n      <h1>Oil &amp; Acrylic</h1>\n"
+en_body = gallery_grid(oel_acryl_items, en_lead, prefix="../", lang="en") + "    </section>\n"
+
 open(os.path.join(OUT, "en", "oel-acryl.html"), "w", encoding="utf-8").write(
     page_shell("Oil & Acrylic | Patricia Luber",
-               "Oil and acrylic paintings by Patricia Luber, organized by Abstract, Landscapes, People, Still Life and Animal Motifs.",
+               "Oil and acrylic paintings by Patricia Luber: Abstract, Landscapes, People, Still Life and Animal Motifs – all works in one gallery.",
                "oel-acryl", en_body, prefix="../", nav_prefix="", path="en/oel-acryl.html",
                image="assets/images/hero.jpg", lang="en", alt_langs=OEL_ACRYL_ALT_LANGS)
 )
