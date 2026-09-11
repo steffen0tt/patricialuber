@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://steffen0tt.github.io/patricialuber/sitemap.xml
+Sitemap: https://patricia-luber.de/sitemap.xml
