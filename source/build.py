@@ -690,11 +690,39 @@ sitemap_paths += ["en/ueber-mich.html", "en/kontakt.html"]
 
 site_url = site.get("url", "")
 if site_url:
-    urls_xml = "\n".join(
-        f"  <url><loc>{esc(site_url + p)}</loc></url>" for p in sitemap_paths
-    )
+    # Bilder-Sitemap: sagt Google explizit, welche Bilder zu welcher Seite gehören
+    # (verbessert die Auffindbarkeit für die Google-Bildersuche).
+    sitemap_images = {}
+    sitemap_images["index.html"] = ["assets/images/hero.jpg"] + [
+        f"assets/images/{img_filename(a['slug'])}" for a in home_items
+    ]
+    sitemap_images["en/index.html"] = sitemap_images["index.html"]
+    sitemap_images["oel-acryl.html"] = [
+        f"assets/images/{img_filename(a['slug'])}" for a in oel_acryl_items
+    ]
+    sitemap_images["en/oel-acryl.html"] = sitemap_images["oel-acryl.html"]
+    for c in all_gallery_cats:
+        cat_items = [a for a in artworks if c["slug"] in a["cats"]]
+        cat_imgs = [f"assets/images/{img_filename(a['slug'])}" for a in cat_items]
+        sitemap_images[f"{c['slug']}.html"] = cat_imgs
+        sitemap_images[f"en/{c['slug']}.html"] = cat_imgs
+    for a in artworks:
+        gfiles = a.get("gallery_files") or [img_filename(a["slug"])]
+        sitemap_images[f"werke/{a['slug']}.html"] = [f"assets/images/{f}" for f in gfiles]
+    sitemap_images["ueber-mich.html"] = ["assets/images/portrait.jpg"]
+    sitemap_images["en/ueber-mich.html"] = ["assets/images/portrait.jpg"]
+
+    def sitemap_url_entry(p):
+        imgs = sitemap_images.get(p, [])
+        img_xml = "".join(
+            f"<image:image><image:loc>{esc(site_url + img)}</image:loc></image:image>"
+            for img in imgs
+        )
+        return f"  <url><loc>{esc(site_url + p)}</loc>{img_xml}</url>"
+
+    urls_xml = "\n".join(sitemap_url_entry(p) for p in sitemap_paths)
     sitemap_xml = f'''<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 {urls_xml}
 </urlset>
 '''
