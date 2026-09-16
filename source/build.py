@@ -327,7 +327,7 @@ for a in artworks:
         _seen_slugs.add(a["slug"])
 
 lead = ("    <section class=\"section\">\n      <h1>Öl &amp; Acryl</h1>\n"
-        "      <p>Hier finden Sie meine komplette Sammlung an Öl- und Acrylbildern von Patricia Luber.</p>\n")
+        "      <p>Hier finden Sie meine komplette Sammlung an Öl- und Acrylbildern &ndash; von abstrakten Kompositionen über Landschaften bis hin zu Stillleben und Tiermotiven.</p>\n")
 body = gallery_grid(oel_acryl_items, lead) + "    </section>\n"
 
 OEL_ACRYL_ALT_LANGS = {"de": "oel-acryl.html", "en": "en/oel-acryl.html"}
@@ -341,7 +341,7 @@ open(os.path.join(OUT, "oel-acryl.html"), "w", encoding="utf-8").write(
 
 # ---------- en/oel-acryl.html ----------
 en_lead = ("    <section class=\"section\">\n      <h1>Oil &amp; Acrylic</h1>\n"
-           "      <p>Here you will find my complete collection of oil and acrylic paintings by Patricia Luber.</p>\n")
+           "      <p>Here you will find my complete collection of oil and acrylic paintings &ndash; from abstract compositions to landscapes, still life and animal motifs.</p>\n")
 en_body = gallery_grid(oel_acryl_items, en_lead, prefix="../", lang="en") + "    </section>\n"
 
 open(os.path.join(OUT, "en", "oel-acryl.html"), "w", encoding="utf-8").write(
@@ -357,7 +357,7 @@ for c in all_gallery_cats:
     items = [a for a in artworks if c["slug"] in a["cats"]]
     lead = f"    <section class=\"section\">\n      <h1>{esc(c['title'])}</h1>\n"
     if c["slug"] == "aquarell":
-        lead += "      <p>Hier finden Sie meine komplette Sammlung an Aquarellbildern von Patricia Luber.</p>\n"
+        lead += "      <p>Hier finden Sie meine komplette Sammlung an Aquarellbildern &ndash; stimmungsvolle Motive in zarten Farbverläufen.</p>\n"
     gallery = gallery_grid(items, lead) + "    </section>\n"
     cat_image = f"assets/images/{img_filename(items[0]['slug'])}" if items else "assets/images/hero.jpg"
     cat_alt_langs = {"de": f"{c['slug']}.html", "en": f"en/{c['slug']}.html"}
@@ -372,7 +372,7 @@ for c in all_gallery_cats:
     title_en = c.get("title_en", c["title"])
     en_lead = f"    <section class=\"section\">\n      <h1>{esc(title_en)}</h1>\n"
     if c["slug"] == "aquarell":
-        en_lead += "      <p>Here you will find my complete collection of watercolor paintings by Patricia Luber.</p>\n"
+        en_lead += "      <p>Here you will find my complete collection of watercolor paintings &ndash; atmospheric motifs in soft, flowing color.</p>\n"
     en_gallery = gallery_grid(items, en_lead, prefix="../", lang="en") + "    </section>\n"
     open(os.path.join(OUT, "en", f"{c['slug']}.html"), "w", encoding="utf-8").write(
         page_shell(f"{title_en} | Patricia Luber",
