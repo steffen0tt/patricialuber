@@ -263,6 +263,8 @@ h2 { font-size: clamp(1.4rem, 3vw, 1.7rem); }
   font-weight: 700;
   margin-bottom: 0.4rem;
 }
+.hero-text h1 { margin-bottom: 1rem; }
+.hero-text p { margin: 0 0 1.4rem; }
 .hero-image img { border-radius: var(--radius-img); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
 
 /* Gallery */
