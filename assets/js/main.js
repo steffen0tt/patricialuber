@@ -186,4 +186,26 @@ document.addEventListener('DOMContentLoaded', function () {
       cards.forEach(function (card) { artGrid.appendChild(card); });
     });
   }
+
+  // Sanftes Einblenden von Bildkarten beim Scrollen (Galerie- und Produktkarten).
+  // Nur aktiv, wenn der Browser IntersectionObserver unterstützt und der Nutzer
+  // keine reduzierte Bewegung eingestellt hat; ohne JS bleibt alles normal sichtbar.
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    var fadeTargets = document.querySelectorAll('.art-card, .slider-card');
+    if (fadeTargets.length) {
+      var fadeObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -40px 0px', threshold: 0.1 });
+      fadeTargets.forEach(function (el) {
+        el.classList.add('fade-in');
+        fadeObserver.observe(el);
+      });
+    }
+  }
 });

@@ -454,6 +454,17 @@ h2 { font-size: clamp(1.4rem, 3vw, 1.7rem); }
 .breadcrumb a:hover { text-decoration: underline; }
 .breadcrumb .sep { color: #ccc; margin: 0 0.3em; }
 
+/* Sanftes Einblenden beim Scrollen (per JS aktiviert, siehe main.js) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Product page */
 .product-layout {
   display: grid;
@@ -658,6 +669,7 @@ h2 { font-size: clamp(1.4rem, 3vw, 1.7rem); }
 
 /* Druckansicht */
 @media print {
+  .fade-in { opacity: 1 !important; transform: none !important; }
   .skip-link,
   .site-header,
   .site-footer,
