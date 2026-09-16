@@ -163,6 +163,9 @@ def page_shell(title, description, active, body, prefix="", extra_head="", path=
 {canonical_tag}{hreflang_tags}<link rel="icon" href="{prefix}assets/icons/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="{prefix}assets/icons/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="{prefix}assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="{prefix}assets/icons/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="{prefix}assets/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="{prefix}assets/icons/favicon-192x192.png">
 <link rel="apple-touch-icon" href="{prefix}assets/icons/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{esc(site['artist'])}">
